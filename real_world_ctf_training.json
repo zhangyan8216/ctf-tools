@@ -1,0 +1,68 @@
+{
+    "real_world_ctf": {
+        "total_challenges": 6,
+        "deployed": 6,
+        "challenges": [
+            {
+                "name": "Blind",
+                "category": "Forensics",
+                "platform": "HackTheBox",
+                "difficulty": "Easy",
+                "description": "Forensic analysis of a memory dump",
+                "download_url": "https://app.hackthebox.com/challenges/Blind",
+                "points": 20,
+                "flag_format": "HTB{...}"
+            },
+            {
+                "name": "Inject",
+                "category": "Web",
+                "platform": "HackTheBox",
+                "difficulty": "Easy",
+                "description": "SQL Injection challenge",
+                "download_url": "https://app.hackthebox.com/challenges/Inject",
+                "points": 20,
+                "flag_format": "HTB{...}"
+            },
+            {
+                "name": "Three",
+                "category": "Crypto",
+                "platform": "HackTheBox",
+                "difficulty": "Easy",
+                "description": "Encryption challenge",
+                "download_url": "https://app.hackthebox.com/challenges/Three",
+                "points": 20,
+                "flag_format": "HTB{...}"
+            },
+            {
+                "name": "Simple Base64",
+                "category": "Encoding",
+                "platform": "CTFlearn",
+                "difficulty": "Easy",
+                "description": "Base64 encoding",
+                "download_url": "https://ctflearn.com/challenge/7",
+                "points": 10,
+                "flag_format": "CTFlearn{...}"
+            },
+            {
+                "name": "ROT-13",
+                "category": "Encoding",
+                "platform": "CTFlearn",
+                "difficulty": "Easy",
+                "description": "ROT13 rotation",
+                "download_url": "https://ctflearn.com/challenge/8",
+                "points": 10,
+                "flag_format": "CTFlearn{...}"
+            },
+            {
+                "name": "HTML Knowledge",
+                "category": "Web",
+                "platform": "CTFlearn",
+                "difficulty": "Easy",
+                "description": "View source code",
+                "download_url": "https://ctflearn.com/challenge/1",
+                "points": 10,
+                "flag_format": "CTFlearn{...}"
+            }
+        ]
+    }
+}

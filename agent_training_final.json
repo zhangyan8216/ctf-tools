@@ -1,0 +1,45 @@
+{
+    "total_rounds": 3,
+    "total_challenges": 14,
+    "total_points": 1340,
+    "capabilities": {
+        "pwn": [
+            "buffer-overflow",
+            "ret2win",
+            "shellcode",
+            "ROP",
+            "ret2libc",
+            "ASLR-bypass"
+        ],
+        "reverse": [
+            "Ghidra",
+            "IDA",
+            "objdump",
+            "GDB",
+            "ptrace",
+            "anti-debug"
+        ],
+        "web": [
+            "union-based",
+            "error-based",
+            "blind-sqli",
+            "SSTI",
+            "XXE",
+            "waf-bypass"
+        ],
+        "crypto": [
+            "RSA",
+            "padding-oracle",
+            "AES-CBC",
+            "ECC",
+            "discrete-log"
+        ],
+        "forensics": [
+            "Volatility",
+            "memory-dump",
+            "Wireshark",
+            "steganography",
+            "metadata-analysis"
+        ]
+    }
+}
