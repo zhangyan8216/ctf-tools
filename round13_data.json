@@ -1,0 +1,155 @@
+{
+    "round": 13,
+    "platforms": [
+        "googlectf",
+        "balccon",
+        "systest"
+    ],
+    "total_new_challenges": 8,
+    "total_new_points": 3860,
+    "timestamp": "2026-02-25 23:20:00",
+    "categories": {
+        "googlectf": {
+            "web": [
+                {
+                    "name": "Bottle_Graphic_Magick",
+                    "category": "Web",
+                    "platform": "Google CTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 500,
+                    "techniques": [
+                        "image",
+                        "ImageMagick",
+                        "SSRF",
+                        "RCE"
+                    ],
+                    "flag_format": "CTF{...}"
+                }
+            ],
+            "pwn": [
+                {
+                    "name": "Kubernetes_Pod",
+                    "category": "Pwn",
+                    "platform": "Google CTF",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 530,
+                    "techniques": [
+                        "kubernetes",
+                        "pod",
+                        "container",
+                        "escape"
+                    ],
+                    "flag_format": "CTF{...}"
+                }
+            ],
+            "reverse": [
+                {
+                    "name": "V8_Javascript_Engine",
+                    "category": "Reverse",
+                    "platform": "Google CTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 550,
+                    "techniques": [
+                        "V8",
+                        "JIT",
+                        "JS engine",
+                        "bug"
+                    ],
+                    "flag_format": "CTF{...}"
+                }
+            ]
+        },
+        "balccon": {
+            "crypto": [
+                {
+                    "name": "Post_Quantum_CRYSTALS",
+                    "category": "Cryptography",
+                    "platform": "Balccon",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 460,
+                    "techniques": [
+                        "CRYSTALS",
+                        "Kyber",
+                        "post-quantum",
+                        "lattice"
+                    ],
+                    "flag_format": "balccon{...}"
+                }
+            ],
+            "misc": [
+                {
+                    "name": "Cloud_Metadata_Bleed",
+                    "category": "Misc",
+                    "platform": "Balccon",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 380,
+                    "techniques": [
+                        "cloud",
+                        "metadata",
+                        "AWS/GCP",
+                        "SSRF"
+                    ],
+                    "flag_format": "balccon{...}"
+                }
+            ]
+        },
+        "systest": {
+            "web": [
+                {
+                    "name": "GraphQL_Dataloader",
+                    "category": "Web",
+                    "platform": "Systest",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 460,
+                    "techniques": [
+                        "GraphQL",
+                        "dataloader",
+                        "batching",
+                        "DoS"
+                    ],
+                    "flag_format": "systest{...}"
+                }
+            ],
+            "pwn": [
+                {
+                    "name": "Linux_Kernel_Hotplug",
+                    "category": "Pwn",
+                    "platform": "Systest",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 480,
+                    "techniques": [
+                        "kernel",
+                        "hotplug",
+                        "sysfs",
+                        "escape"
+                    ],
+                    "flag_format": "systest{...}"
+                }
+            ],
+            "reverse": [
+                {
+                    "name": "QEMU_Escape",
+                    "category": "Reverse",
+                    "platform": "Systest",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 500,
+                    "techniques": [
+                        "QEMU",
+                        "VM",
+                        "escape",
+                        "virtio"
+                    ],
+                    "flag_format": "systest{...}"
+                }
+            ]
+        }
+    }
+}
