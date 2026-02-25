@@ -1,0 +1,13 @@
+{
+    "round": 6,
+    "timestamp": "2026-02-25 20:56:34",
+    "new_platforms": [
+        "CCTF",
+        "ByteCTF",
+        "DEFCON"
+    ],
+    "total_new": 22,
+    "total_points": 5000,
+    "grand_total": 106,
+    "grand_total_points": 14570
+}
