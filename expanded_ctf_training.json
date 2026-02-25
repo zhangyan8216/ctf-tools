@@ -1,0 +1,144 @@
+{
+    "system": "Expanded CTF Training System",
+    "version": "3.0",
+    "metadata": {
+        "total_categories": 3,
+        "total_challenges": 8,
+        "total_points": 1250,
+        "difficulty_distribution": {
+            "Medium": 1,
+            "Hard": 5,
+            "Expert": 2
+        }
+    },
+    "categories": {
+        "web_advanced_plus": [
+            {
+                "name": "Server-Side Request Forgery (SSRF)",
+                "category": "Web",
+                "platform": "PortSwigger",
+                "difficulty": "Hard",
+                "description": "Exploit SSRF to access internal services",
+                "download_url": "https://portswigger.net/web-security/ssrf",
+                "points": 150,
+                "techniques": [
+                    "SSRF",
+                    "internal-scan",
+                    "cloud-metadata",
+                    "redis"
+                ]
+            },
+            {
+                "name": "Insecure Deserialization",
+                "category": "Web",
+                "platform": "PortSwigger",
+                "difficulty": "Hard",
+                "description": "Exploit insecure deserialization vulnerabilities in Java and PHP",
+                "download_url": "https://portswigger.net/web-security/deserialization",
+                "points": 180,
+                "techniques": [
+                    "deserialization",
+                    "ysoserial",
+                    "php-obj",
+                    "java-gadget"
+                ]
+            },
+            {
+                "name": "File Upload Vulnerability",
+                "category": "Web",
+                "platform": "PortSwigger",
+                "difficulty": "Medium",
+                "description": "Bypass file upload restrictions to execute code",
+                "download_url": "https://portswigger.net/web-security/file-upload",
+                "points": 100,
+                "techniques": [
+                    "file-upload",
+                    "bypass",
+                    "webshell",
+                    "image-injection"
+                ]
+            },
+            {
+                "name": "Race Condition (TOCTOU)",
+                "category": "Web",
+                "platform": "PicoCTF",
+                "difficulty": "Hard",
+                "description": "Exploit time-of-check to time-of-use race condition",
+                "download_url": "https://github.com/picoCTF/2024-picoctf-writeups/tree/main/web/race-condition",
+                "points": 140,
+                "techniques": [
+                    "race-condition",
+                    "TOCTOU",
+                    "raceweb",
+                    "concurrent-requests"
+                ]
+            }
+        ],
+        "pwn_advanced_plus": [
+            {
+                "name": "Kernel Exploit",
+                "category": "Pwn",
+                "platform": "PicoCTF",
+                "difficulty": "Expert",
+                "description": "Exploit kernel vulnerability to escalate privileges",
+                "download_url": "https://github.com/picoCTF/2024-picoctf-writeups/tree/main/binary-exploitation/kernel",
+                "points": 200,
+                "techniques": [
+                    "kernel-exploit",
+                    "cred",
+                    "privilege-escalation",
+                    "mitigation-bypass"
+                ]
+            },
+            {
+                "name": "Format String Attack",
+                "category": "Pwn",
+                "platform": "PicoCTF",
+                "difficulty": "Hard",
+                "description": "Exploit format string vulnerabilities to read/write memory",
+                "download_url": "https://github.com/picoCTF/2024-picoctf-writeups/tree/main/binary-exploitation/format-string",
+                "points": 120,
+                "techniques": [
+                    "format-string",
+                    "arbitrary-read",
+                    "arbitrary-write",
+                    "GOT-overwrite"
+                ]
+            }
+        ],
+        "crypto_advanced_plus": [
+            {
+                "name": "Lattice-Based Cryptography",
+                "category": "Cryptography",
+                "platform": "CryptoHack",
+                "difficulty": "Expert",
+                "description": "Solve lattice problems using CVP and SVP algorithms",
+                "download_url": "https://cryptohack.org/challenges/lattice",
+                "points": 200,
+                "techniques": [
+                    "lattice",
+                    "LLL",
+                    "CVP",
+                    "SVP",
+                    "basis-reduction"
+                ]
+            },
+            {
+                "name": "Side-Channel Attacks",
+                "category": "Cryptography",
+                "platform": "CryptoHack",
+                "difficulty": "Hard",
+                "description": "Recover key through timing and power analysis",
+                "download_url": "https://cryptohack.org/challenges/side-channel",
+                "points": 160,
+                "techniques": [
+                    "timing-attack",
+                    "power-analysis",
+                    "side-channel",
+                    "dpa",
+                    "cpa"
+                ]
+            }
+        ]
+    }
+}
