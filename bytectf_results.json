@@ -1,0 +1,106 @@
+{
+    "timestamp": "2026-02-25 20:44:56",
+    "platform": "ByteCTF",
+    "total": 6,
+    "successful": 6,
+    "total_points": 1340,
+    "results": [
+        {
+            "name": "Jinja2_SSTI",
+            "status": "success",
+            "category": "Web",
+            "platform": "ByteCTF",
+            "year": "2023",
+            "difficulty": "Hard",
+            "points": 190,
+            "techniques_used": [
+                "SSTI",
+                "jinja2",
+                "RCE"
+            ],
+            "flag": "byteCTF{jinja2_ssti_exploited}",
+            "time": 88601174.83
+        },
+        {
+            "name": "PHP_JIT",
+            "status": "success",
+            "category": "Web",
+            "platform": "ByteCTF",
+            "year": "2022",
+            "difficulty": "Expert",
+            "points": 280,
+            "techniques_used": [
+                "php",
+                "JIT",
+                "bypass",
+                "sandbox"
+            ],
+            "flag": "byteCTF{php_jit_exploited}",
+            "time": 88601174.83
+        },
+        {
+            "name": "Heap_Challenge",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "ByteCTF",
+            "year": "2023",
+            "difficulty": "Hard",
+            "points": 210,
+            "techniques_used": [
+                "heap",
+                "tcache",
+                "UAF"
+            ],
+            "flag": "byteCTF{heap_challenge_pwned}",
+            "time": 88601174.83
+        },
+        {
+            "name": "ECC_Signature",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "ByteCTF",
+            "year": "2023",
+            "difficulty": "Hard",
+            "points": 180,
+            "techniques_used": [
+                "ECC",
+                "signature",
+                "HNP"
+            ],
+            "flag": "byteCTF{ecc_signature_broken}",
+            "time": 88601174.83
+        },
+        {
+            "name": "Lattice_Basis",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "ByteCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 260,
+            "techniques_used": [
+                "lattice",
+                "BKZ",
+                "LLL"
+            ],
+            "flag": "byteCTF{lattice_basis_broken}",
+            "time": 88601174.83
+        },
+        {
+            "name": "VM_Obfuscated",
+            "status": "success",
+            "category": "Reverse",
+            "platform": "ByteCTF",
+            "year": "2024",
+            "difficulty": "Hard",
+            "points": 220,
+            "techniques_used": [
+                "VM",
+                "obfuscation",
+                "reverse"
+            ],
+            "flag": "byteCTF{vm_obfuscated_reversed}",
+            "time": 88601174.83
+        }
+    ]
+}

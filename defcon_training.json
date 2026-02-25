@@ -1,0 +1,100 @@
+{
+    "system": "DEFCON CTF Training System",
+    "platform": "DEFCON",
+    "total_challenges": 6,
+    "total_points": 2400,
+    "categories": {
+        "pwn_defcon": [
+            {
+                "name": "Quals_Baby",
+                "category": "Pwn",
+                "platform": "DEFCON",
+                "year": "2023",
+                "difficulty": "Medium",
+                "points": 300,
+                "techniques": [
+                    "BOF",
+                    "shellcode"
+                ],
+                "flag_format": "picoCTF{...}"
+            },
+            {
+                "name": "Finals_Challenge",
+                "category": "Pwn",
+                "platform": "DEFCON",
+                "year": "2023",
+                "difficulty": "Expert",
+                "points": 500,
+                "techniques": [
+                    "kernel",
+                    "heap",
+                    "ROP",
+                    "Mitigation"
+                ],
+                "flag_format": "picoCTF{...}"
+            }
+        ],
+        "crypto_defcon": [
+            {
+                "name": "RSA_Wizard",
+                "category": "Cryptography",
+                "platform": "DEFCON",
+                "year": "2022",
+                "difficulty": "Expert",
+                "points": 400,
+                "techniques": [
+                    "RSA",
+                    "multi-prime",
+                    "CRT"
+                ],
+                "flag_format": "picoCTF{...}"
+            },
+            {
+                "name": "Poly_1305",
+                "category": "Cryptography",
+                "platform": "DEFCON",
+                "year": "2023",
+                "difficulty": "Expert",
+                "points": 450,
+                "techniques": [
+                    "poly",
+                    "1305",
+                    "broken"
+                ],
+                "flag_format": "picoCTF{...}"
+            }
+        ],
+        "web_defcon": [
+            {
+                "name": "Web_Injection",
+                "category": "Web",
+                "platform": "DEFCON",
+                "year": "2023",
+                "difficulty": "Expert",
+                "points": 380,
+                "techniques": [
+                    "complex-injection",
+                    "WAF",
+                    "bypass"
+                ],
+                "flag_format": "picoCTF{...}"
+            }
+        ],
+        "reverse_defcon": [
+            {
+                "name": "Binary_Analysis",
+                "category": "Reverse",
+                "platform": "DEFCON",
+                "year": "2022",
+                "difficulty": "Expert",
+                "points": 370,
+                "techniques": [
+                    "advanced",
+                    "obfuscation",
+                    "anti-VM"
+                ],
+                "flag_format": "picoCTF{...}"
+            }
+        ]
+    }
+}

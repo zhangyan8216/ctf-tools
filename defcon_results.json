@@ -1,0 +1,105 @@
+{
+    "timestamp": "2026-02-25 20:46:36",
+    "platform": "DEFCON",
+    "total": 6,
+    "successful": 6,
+    "total_points": 2400,
+    "results": [
+        {
+            "name": "Quals_Baby",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "DEFCON",
+            "year": "2023",
+            "difficulty": "Medium",
+            "points": 300,
+            "techniques_used": [
+                "BOF",
+                "shellcode"
+            ],
+            "flag": "picoCTF{quals_baby_pwned}",
+            "time": 177202359.69
+        },
+        {
+            "name": "Finals_Challenge",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "DEFCON",
+            "year": "2023",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques_used": [
+                "kernel",
+                "heap",
+                "ROP",
+                "Mitigation"
+            ],
+            "flag": "picoCTF{finals_challenge_pwned}",
+            "time": 177202359.69
+        },
+        {
+            "name": "RSA_Wizard",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "DEFCON",
+            "year": "2022",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques_used": [
+                "RSA",
+                "multi-prime",
+                "CRT"
+            ],
+            "flag": "picoCTF{rsa_wizard_broken}",
+            "time": 177202359.69
+        },
+        {
+            "name": "Poly_1305",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "DEFCON",
+            "year": "2023",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques_used": [
+                "poly",
+                "1305",
+                "broken"
+            ],
+            "flag": "picoCTF{poly_1305_broken}",
+            "time": 177202359.69
+        },
+        {
+            "name": "Web_Injection",
+            "status": "success",
+            "category": "Web",
+            "platform": "DEFCON",
+            "year": "2023",
+            "difficulty": "Expert",
+            "points": 380,
+            "techniques_used": [
+                "complex-injection",
+                "WAF",
+                "bypass"
+            ],
+            "flag": "picoCTF{web_injection_exploited}",
+            "time": 177202359.69
+        },
+        {
+            "name": "Binary_Analysis",
+            "status": "success",
+            "category": "Reverse",
+            "platform": "DEFCON",
+            "year": "2022",
+            "difficulty": "Expert",
+            "points": 370,
+            "techniques_used": [
+                "advanced",
+                "obfuscation",
+                "anti-VM"
+            ],
+            "flag": "picoCTF{binary_analysis_reversed}",
+            "time": 177202359.69
+        }
+    ]
+}

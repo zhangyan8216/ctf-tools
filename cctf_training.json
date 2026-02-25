@@ -1,0 +1,151 @@
+{
+    "system": "CCTF Training System",
+    "platform": "CCTF (\u4e2d\u56fd\u7f51\u7edc\u5b89\u5168\u5927\u8d5b)",
+    "total_challenges": 10,
+    "total_points": 1260,
+    "categories": {
+        "web_cctf": [
+            {
+                "name": "Ez_SQL",
+                "category": "Web",
+                "platform": "CCTF",
+                "year": "2023",
+                "difficulty": "Easy",
+                "points": 50,
+                "techniques": [
+                    "SQLi",
+                    "union-based"
+                ],
+                "flag_format": "CCTF{...}"
+            },
+            {
+                "name": "Ez_PHP",
+                "category": "Web",
+                "platform": "CCTF",
+                "year": "2023",
+                "difficulty": "Easy",
+                "points": 50,
+                "techniques": [
+                    "PHP",
+                    "LFI"
+                ],
+                "flag_format": "CCTF{...}"
+            },
+            {
+                "name": "Web_Machine",
+                "category": "Web",
+                "platform": "CCTF",
+                "year": "2022",
+                "difficulty": "Hard",
+                "points": 180,
+                "techniques": [
+                    "SSRF",
+                    "nodejs",
+                    "RCE"
+                ],
+                "flag_format": "CCTF{...}"
+            },
+            {
+                "name": "Unserialize_PhP",
+                "category": "Web",
+                "platform": "CCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "points": 170,
+                "techniques": [
+                    "php",
+                    "deserialization",
+                    "pop-chain"
+                ],
+                "flag_format": "CCTF{...}"
+            }
+        ],
+        "pwn_cctf": [
+            {
+                "name": "PWN",
+                "category": "Pwn",
+                "platform": "CCTF",
+                "year": "2022",
+                "difficulty": "Medium",
+                "points": 120,
+                "techniques": [
+                    "BOF",
+                    "shellcode"
+                ],
+                "flag_format": "CCTF{...}"
+            },
+            {
+                "name": "Blacklist",
+                "category": "Pwn",
+                "platform": "CCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "points": 200,
+                "techniques": [
+                    "ROP",
+                    "ret2libc",
+                    "bypass"
+                ],
+                "flag_format": "CCTF{...}"
+            }
+        ],
+        "crypto_cctf": [
+            {
+                "name": "Classical_RSA",
+                "category": "Cryptography",
+                "platform": "CCTF",
+                "year": "2023",
+                "difficulty": "Medium",
+                "points": 100,
+                "techniques": [
+                    "RSA",
+                    "low-exponent",
+                    "wiener"
+                ],
+                "flag_format": "CCTF{...}"
+            },
+            {
+                "name": "LFSR_Gen",
+                "category": "Cryptography",
+                "platform": "CCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "points": 160,
+                "techniques": [
+                    "LFSR",
+                    "stream-cipher"
+                ],
+                "flag_format": "CCTF{...}"
+            }
+        ],
+        "misc_cctf": [
+            {
+                "name": "Image_Stego",
+                "category": "Misc",
+                "platform": "CCTF",
+                "year": "2023",
+                "difficulty": "Medium",
+                "points": 90,
+                "techniques": [
+                    "steganography",
+                    "LSB"
+                ],
+                "flag_format": "CCTF{...}"
+            },
+            {
+                "name": "Hidden_Flag",
+                "category": "Misc",
+                "platform": "CCTF",
+                "year": "2022",
+                "difficulty": "Hard",
+                "points": 140,
+                "techniques": [
+                    "forensics",
+                    "memory",
+                    "strings"
+                ],
+                "flag_format": "CCTF{...}"
+            }
+        ]
+    }
+}
