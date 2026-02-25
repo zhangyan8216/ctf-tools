@@ -1,0 +1,153 @@
+{
+    "round": 11,
+    "platforms": [
+        "plaidctf",
+        "codegate",
+        "tokyowesterns"
+    ],
+    "total_new_challenges": 8,
+    "total_new_points": 3540,
+    "timestamp": "2026-02-25 22:55:00",
+    "categories": {
+        "plaidctf": {
+            "pwn": [
+                {
+                    "name": "Heap_House_of_Lore_Extended",
+                    "category": "Pwn",
+                    "platform": "PlaidCTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 520,
+                    "techniques": [
+                        "heap",
+                        "fastbin",
+                        "House of Lore",
+                        "double-free"
+                    ],
+                    "flag_format": "plaid{...}"
+                },
+                {
+                    "name": "Sandbox_Escape",
+                    "category": "Pwn",
+                    "platform": "PlaidCTF",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 540,
+                    "techniques": [
+                        "sandbox",
+                        "seccomp",
+                        "kernel",
+                        "escape"
+                    ],
+                    "flag_format": "plaid{...}"
+                }
+            ],
+            "crypto": [
+                {
+                    "name": "Post_Quantum_NTRU",
+                    "category": "Cryptography",
+                    "platform": "PlaidCTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 470,
+                    "techniques": [
+                        "NTRU",
+                        "lattice",
+                        "SVP",
+                        "post-quantum"
+                    ],
+                    "flag_format": "plaid{...}"
+                }
+            ]
+        },
+        "codegate": {
+            "web": [
+                {
+                    "name": "Web_Cache_Poison",
+                    "category": "Web",
+                    "platform": "Codegate",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 430,
+                    "techniques": [
+                        "cache-poison",
+                        "HTTP",
+                        "header",
+                        "SSRF"
+                    ],
+                    "flag_format": "codegate{...}"
+                }
+            ],
+            "pwn": [
+                {
+                    "name": "Kernel_Heap_Spray",
+                    "category": "Pwn",
+                    "platform": "Codegate",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 490,
+                    "techniques": [
+                        "kernel",
+                        "heap",
+                        "spray",
+                        "UAF"
+                    ],
+                    "flag_format": "codegate{...}"
+                }
+            ]
+        },
+        "tokyowesterns": {
+            "misc": [
+                {
+                    "name": "USB_Forensics",
+                    "category": "Misc",
+                    "platform": "Tokyowesterns",
+                    "year": "2023",
+                    "difficulty": "Hard",
+                    "points": 300,
+                    "techniques": [
+                        "USB",
+                        "forensics",
+                        "packet",
+                        "traffic"
+                    ],
+                    "flag_format": "tw{...}"
+                }
+            ],
+            "reverse": [
+                {
+                    "name": "Obfuscated_Binary",
+                    "category": "Reverse",
+                    "platform": "Tokyowesterns",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 440,
+                    "techniques": [
+                        "obfusc",
+                        "VM",
+                        "reverse",
+                        "packer"
+                    ],
+                    "flag_format": "tw{...}"
+                }
+            ],
+            "web": [
+                {
+                    "name": "GraphQL_Introspection",
+                    "category": "Web",
+                    "platform": "Tokyowesterns",
+                    "year": "2023",
+                    "difficulty": "Hard",
+                    "points": 350,
+                    "techniques": [
+                        "GraphQL",
+                        "introspection",
+                        "RCE",
+                        "bypass"
+                    ],
+                    "flag_format": "tw{...}"
+                }
+            ]
+        }
+    }
+}
