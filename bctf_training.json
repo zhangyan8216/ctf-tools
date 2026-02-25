@@ -1,0 +1,172 @@
+{
+    "system": "BCTF Training System",
+    "version": "1.0",
+    "metadata": {
+        "platform": "BCTF (\u84dd\u83b2\u82b1)",
+        "total_categories": 4,
+        "total_challenges": 9,
+        "total_points": 1390,
+        "difficulty_distribution": {
+            "Medium": 3,
+            "Hard": 4,
+            "Expert": 2
+        }
+    },
+    "categories": {
+        "web_bctf": [
+            {
+                "name": "Flask_Secret_KEY",
+                "category": "Web",
+                "platform": "BCTF",
+                "year": "2023",
+                "difficulty": "Medium",
+                "description": "Flask session forgery with secret key recovery",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 100,
+                "techniques": [
+                    "session-forgery",
+                    "flask-secret",
+                    "pki"
+                ],
+                "flag_format": "bctf{...}"
+            },
+            {
+                "name": "Redis_Unauthorized",
+                "category": "Web",
+                "platform": "BCTF",
+                "year": "2022",
+                "difficulty": "Medium",
+                "description": "Exploit unauthorized Redis access",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 80,
+                "techniques": [
+                    "redis",
+                    "unauthorized",
+                    "rce"
+                ],
+                "flag_format": "bctf{...}"
+            },
+            {
+                "name": "PHP_JavaScript_RCE",
+                "category": "Web",
+                "platform": "BCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "description": "Complex PHP/JavaScript code execution",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 160,
+                "techniques": [
+                    "php",
+                    "javascript",
+                    "rce",
+                    "bypass"
+                ],
+                "flag_format": "bctf{...}"
+            }
+        ],
+        "pwn_bctf": [
+            {
+                "name": "Heap_Overflow",
+                "category": "Pwn",
+                "platform": "BCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "description": "Advanced heap overflow exploitation",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 180,
+                "techniques": [
+                    "heap-overflow",
+                    "fastbin",
+                    "malloc_hook"
+                ],
+                "flag_format": "bctf{...}"
+            },
+            {
+                "name": "Kernel_Pwn",
+                "category": "Pwn",
+                "platform": "BCTF",
+                "year": "2022",
+                "difficulty": "Expert",
+                "description": "Kernel vulnerability exploitation",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 250,
+                "techniques": [
+                    "kernel",
+                    "cred",
+                    "selinux",
+                    "mitigation"
+                ],
+                "flag_format": "bctf{...}"
+            }
+        ],
+        "crypto_bctf": [
+            {
+                "name": "ECDH_Challenge",
+                "category": "Cryptography",
+                "platform": "BCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "description": "Elliptic Curve Diffie-Hellman attack",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 140,
+                "techniques": [
+                    "ECDH",
+                    "ECC",
+                    "discrete-log"
+                ],
+                "flag_format": "bctf{...}"
+            },
+            {
+                "name": "LWE_Wrapper",
+                "category": "Cryptography",
+                "platform": "BCTF",
+                "year": "2023",
+                "difficulty": "Expert",
+                "description": "Learning With Errors problem",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 220,
+                "techniques": [
+                    "LWE",
+                    "lattice",
+                    "BKZ",
+                    "LLL"
+                ],
+                "flag_format": "bctf{...}"
+            }
+        ],
+        "misc_bctf": [
+            {
+                "name": "QR_Code_Stego",
+                "category": "Misc",
+                "platform": "BCTF",
+                "year": "2023",
+                "difficulty": "Medium",
+                "description": "Hidden data in QR codes",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 90,
+                "techniques": [
+                    "QR-code",
+                    "steganography",
+                    "extraction"
+                ],
+                "flag_format": "bctf{...}"
+            },
+            {
+                "name": "Docker_Escape",
+                "category": "Misc",
+                "platform": "BCTF",
+                "year": "2022",
+                "difficulty": "Hard",
+                "description": "Docker container escape",
+                "writeup_url": "https://bctf.xctf.org.cn/challenges",
+                "points": 170,
+                "techniques": [
+                    "docker",
+                    "privilege-escalation",
+                    "escape"
+                ],
+                "flag_format": "bctf{...}"
+            }
+        ]
+    }
+}

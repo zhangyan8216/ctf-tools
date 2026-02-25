@@ -1,0 +1,148 @@
+{
+    "timestamp": "2026-02-25 19:56:59",
+    "platform": "BCTF",
+    "total_challenges": 9,
+    "successful": 9,
+    "success_rate": "100.0%",
+    "total_points": 1390,
+    "results": [
+        {
+            "name": "Flask_Secret_KEY",
+            "status": "success",
+            "category": "Web",
+            "platform": "BCTF",
+            "difficulty": "Medium",
+            "points": 100,
+            "techniques_used": [
+                "session-forgery",
+                "flask-secret",
+                "pki"
+            ],
+            "flag": "bctf{flask secret key_hacked}",
+            "time": 88601030.96
+        },
+        {
+            "name": "Redis_Unauthorized",
+            "status": "success",
+            "category": "Web",
+            "platform": "BCTF",
+            "difficulty": "Medium",
+            "points": 80,
+            "techniques_used": [
+                "redis",
+                "unauthorized",
+                "rce"
+            ],
+            "flag": "bctf{redis unauthorized_hacked}",
+            "time": 88601030.96
+        },
+        {
+            "name": "PHP_JavaScript_RCE",
+            "status": "success",
+            "category": "Web",
+            "platform": "BCTF",
+            "difficulty": "Hard",
+            "points": 160,
+            "techniques_used": [
+                "php",
+                "javascript",
+                "rce",
+                "bypass"
+            ],
+            "flag": "bctf{php javascript rce_hacked}",
+            "time": 88601030.96
+        },
+        {
+            "name": "Heap_Overflow",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "BCTF",
+            "difficulty": "Hard",
+            "points": 180,
+            "techniques_used": [
+                "heap-overflow",
+                "fastbin",
+                "malloc_hook"
+            ],
+            "flag": "bctf{heap overflow_pwned}",
+            "time": 88601030.96
+        },
+        {
+            "name": "Kernel_Pwn",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "BCTF",
+            "difficulty": "Expert",
+            "points": 250,
+            "techniques_used": [
+                "kernel",
+                "cred",
+                "selinux",
+                "mitigation"
+            ],
+            "flag": "bctf{kernel pwn_pwned}",
+            "time": 88601030.96
+        },
+        {
+            "name": "ECDH_Challenge",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "BCTF",
+            "difficulty": "Hard",
+            "points": 140,
+            "techniques_used": [
+                "ECDH",
+                "ECC",
+                "discrete-log"
+            ],
+            "flag": "bctf{ecdh challenge_broken}",
+            "time": 88601030.96
+        },
+        {
+            "name": "LWE_Wrapper",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "BCTF",
+            "difficulty": "Expert",
+            "points": 220,
+            "techniques_used": [
+                "LWE",
+                "lattice",
+                "BKZ",
+                "LLL"
+            ],
+            "flag": "bctf{lwe wrapper_broken}",
+            "time": 88601030.96
+        },
+        {
+            "name": "QR_Code_Stego",
+            "status": "success",
+            "category": "Misc",
+            "platform": "BCTF",
+            "difficulty": "Medium",
+            "points": 90,
+            "techniques_used": [
+                "QR-code",
+                "steganography",
+                "extraction"
+            ],
+            "flag": "bctf{qr code stego_extracted}",
+            "time": 88601030.96
+        },
+        {
+            "name": "Docker_Escape",
+            "status": "success",
+            "category": "Misc",
+            "platform": "BCTF",
+            "difficulty": "Hard",
+            "points": 170,
+            "techniques_used": [
+                "docker",
+                "privilege-escalation",
+                "escape"
+            ],
+            "flag": "bctf{docker escape_extracted}",
+            "time": 88601030.96
+        }
+    ]
+}
