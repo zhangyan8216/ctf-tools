@@ -1,0 +1,153 @@
+{
+    "round": 12,
+    "platforms": [
+        "d3ctf",
+        "bsides",
+        "angstormayhem"
+    ],
+    "total_new_challenges": 8,
+    "total_new_points": 3550,
+    "timestamp": "2026-02-25 23:00:00",
+    "categories": {
+        "d3ctf": {
+            "pwn": [
+                {
+                    "name": "Sandbox_Linux_Namespaces",
+                    "category": "Pwn",
+                    "platform": "D3CTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 480,
+                    "techniques": [
+                        "sandbox",
+                        "namespaces",
+                        "namespace",
+                        "escape"
+                    ],
+                    "flag_format": "d3{...}"
+                },
+                {
+                    "name": "Hypervisor_Escape",
+                    "category": "Pwn",
+                    "platform": "D3CTF",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 550,
+                    "techniques": [
+                        "hypervisor",
+                        "VM",
+                        "escape",
+                        "virt"
+                    ],
+                    "flag_format": "d3{...}"
+                }
+            ],
+            "crypto": [
+                {
+                    "name": "Learning_with_Errors",
+                    "category": "Cryptography",
+                    "platform": "D3CTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 460,
+                    "techniques": [
+                        "LWE",
+                        "lattice",
+                        "BKW",
+                        "quantum"
+                    ],
+                    "flag_format": "d3{...}"
+                }
+            ]
+        },
+        "bsides": {
+            "web": [
+                {
+                    "name": "JWT_Signature",
+                    "category": "Web",
+                    "platform": "BSides",
+                    "year": "2023",
+                    "difficulty": "Hard",
+                    "points": 320,
+                    "techniques": [
+                        "JWT",
+                        "signature",
+                        "forgery",
+                        "token"
+                    ],
+                    "flag_format": "bsides{...}"
+                }
+            ],
+            "reverse": [
+                {
+                    "name": "Virtual_Machine_VM",
+                    "category": "Reverse",
+                    "platform": "BSides",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 420,
+                    "techniques": [
+                        "VM-based",
+                        "custom",
+                        "decompile",
+                        "obfus"
+                    ],
+                    "flag_format": "bsides{...}"
+                }
+            ]
+        },
+        "angstormayhem": {
+            "misc": [
+                {
+                    "name": "Kernel_Modules",
+                    "category": "Misc",
+                    "platform": "Angstormayhem",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 380,
+                    "techniques": [
+                        "kernel",
+                        "module",
+                        "syscall",
+                        "privilege"
+                    ],
+                    "flag_format": "angstrom{...}"
+                }
+            ],
+            "pwn": [
+                {
+                    "name": "Container_Kubernetes",
+                    "category": "Pwn",
+                    "platform": "Angstormayhem",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 500,
+                    "techniques": [
+                        "container",
+                        "kubernetes",
+                        "escape",
+                        "cgroups"
+                    ],
+                    "flag_format": "angstrom{...}"
+                }
+            ],
+            "crypto": [
+                {
+                    "name": "ECC_Point_Compression",
+                    "category": "Cryptography",
+                    "platform": "Angstormayhem",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 440,
+                    "techniques": [
+                        "ECC",
+                        "point-compression",
+                        "curve",
+                        "recovery"
+                    ],
+                    "flag_format": "angstrom{...}"
+                }
+            ]
+        }
+    }
+}
