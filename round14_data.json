@@ -1,0 +1,155 @@
+{
+    "round": 14,
+    "platforms": [
+        "rwctf",
+        "cuber",
+        "wectf"
+    ],
+    "total_new_challenges": 8,
+    "total_new_points": 3520,
+    "timestamp": "2026-02-25 23:40:00",
+    "categories": {
+        "rwctf": {
+            "web": [
+                {
+                    "name": "SSRF_Internal_Scan",
+                    "category": "Web",
+                    "platform": "RWCTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 470,
+                    "techniques": [
+                        "SSRF",
+                        "internal-scan",
+                        "blind",
+                        "DNS Reb"
+                    ],
+                    "flag_format": "rwctf{...}"
+                }
+            ],
+            "pwn": [
+                {
+                    "name": "Userfaultfd_Heap",
+                    "category": "Pwn",
+                    "platform": "RWCTF",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 510,
+                    "techniques": [
+                        "userfaultfd",
+                        "heap",
+                        "race",
+                        "UAF"
+                    ],
+                    "flag_format": "rwctf{...}"
+                }
+            ],
+            "reverse": [
+                {
+                    "name": "Windows_Kernel",
+                    "category": "Reverse",
+                    "platform": "RWCTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 490,
+                    "techniques": [
+                        "Windows",
+                        "kernel",
+                        "driver",
+                        "exploit"
+                    ],
+                    "flag_format": "rwctf{...}"
+                }
+            ]
+        },
+        "cuber": {
+            "crypto": [
+                {
+                    "name": "Elliptic_Curve_Deterministic",
+                    "category": "Cryptography",
+                    "platform": "CuberCTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 450,
+                    "techniques": [
+                        "ECC",
+                        "deterministic",
+                        "nonce",
+                        "private-key"
+                    ],
+                    "flag_format": "cuber{...}"
+                }
+            ],
+            "misc": [
+                {
+                    "name": "Docker_Registry",
+                    "category": "Misc",
+                    "platform": "CuberCTF",
+                    "year": "2024",
+                    "difficulty": "Hard",
+                    "points": 360,
+                    "techniques": [
+                        "docker",
+                        "registry",
+                        "API",
+                        "token"
+                    ],
+                    "flag_format": "cuber{...}"
+                }
+            ]
+        },
+        "wectf": {
+            "web": [
+                {
+                    "name": "NoSQL_Injection",
+                    "category": "Web",
+                    "platform": "WECTF",
+                    "year": "2023",
+                    "difficulty": "Hard",
+                    "points": 380,
+                    "techniques": [
+                        "NoSQL",
+                        "MongoDB",
+                        "injection",
+                        "bypass"
+                    ],
+                    "flag_format": "wectf{...}"
+                }
+            ],
+            "pwn": [
+                {
+                    "name": "IoT_ARM_Binary",
+                    "category": "Pwn",
+                    "platform": "WECTF",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 440,
+                    "techniques": [
+                        "IoT",
+                        "ARM",
+                        "binary",
+                        "ROP"
+                    ],
+                    "flag_format": "wectf{...}"
+                }
+            ],
+            "crypto": [
+                {
+                    "name": "LWE_with_Hints",
+                    "category": "Cryptography",
+                    "platform": "WECTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 420,
+                    "techniques": [
+                        "LWE",
+                        "hints",
+                        "lattice",
+                        "reduction"
+                    ],
+                    "flag_format": "wectf{...}"
+                }
+            ]
+        }
+    }
+}
