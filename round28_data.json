@@ -1,0 +1,97 @@
+{
+    "round": 28,
+    "platforms": [
+        "Pwnable",
+        "SmashTheStack",
+        "WeChall"
+    ],
+    "timestamp": "2026-02-26 24:08:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "Pwnable_Web_Expert_1",
+            "category": "Web",
+            "platform": "Pwnable",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "pwnable{...}"
+        },
+        {
+            "name": "Pwnable_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "Pwnable",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "pwnable{...}"
+        },
+        {
+            "name": "SmashTheStack_Web_Expert_1",
+            "category": "Web",
+            "platform": "SmashTheStack",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "smashthestack{...}"
+        },
+        {
+            "name": "SmashTheStack_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "SmashTheStack",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "smashthestack{...}"
+        },
+        {
+            "name": "WeChall_Web_Expert_1",
+            "category": "Web",
+            "platform": "WeChall",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "wechall{...}"
+        },
+        {
+            "name": "WeChall_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "WeChall",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "wechall{...}"
+        }
+    ]
+}

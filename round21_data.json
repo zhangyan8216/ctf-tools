@@ -1,0 +1,139 @@
+{
+    "round": 21,
+    "platforms": [
+        "HITCON_Taiwan",
+        "CyberChallenge",
+        "CryptoCTF"
+    ],
+    "timestamp": "2026-02-26 23:42:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "HITCON_Taiwan_Web_Expert_1",
+            "category": "Web",
+            "platform": "HITCON_Taiwan",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hitcon_taiwan{...}"
+        },
+        {
+            "name": "HITCON_Taiwan_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "HITCON_Taiwan",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hitcon_taiwan{...}"
+        },
+        {
+            "name": "HITCON_Taiwan_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "HITCON_Taiwan",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "hitcon_taiwan{...}"
+        },
+        {
+            "name": "CyberChallenge_Web_Expert_1",
+            "category": "Web",
+            "platform": "CyberChallenge",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "cyberchallenge{...}"
+        },
+        {
+            "name": "CyberChallenge_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "CyberChallenge",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "cyberchallenge{...}"
+        },
+        {
+            "name": "CyberChallenge_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "CyberChallenge",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "cyberchallenge{...}"
+        },
+        {
+            "name": "CryptoCTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "CryptoCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "cryptoctf{...}"
+        },
+        {
+            "name": "CryptoCTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "CryptoCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "cryptoctf{...}"
+        },
+        {
+            "name": "CryptoCTF_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "CryptoCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "cryptoctf{...}"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "round": 37,
+    "platforms": [
+        "BSidesDC",
+        "BSidesMSP"
+    ],
+    "timestamp": "2026-02-26 24:26:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "BSidesDC_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesDC",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidesdc{...}"
+        },
+        {
+            "name": "BSidesDC_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesDC",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidesdc{...}"
+        },
+        {
+            "name": "BSidesDC_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "BSidesDC",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "bsidesdc{...}"
+        },
+        {
+            "name": "BSidesMSP_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesMSP",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidesmsp{...}"
+        },
+        {
+            "name": "BSidesMSP_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesMSP",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidesmsp{...}"
+        },
+        {
+            "name": "BSidesMSP_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "BSidesMSP",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "bsidesmsp{...}"
+        }
+    ]
+}

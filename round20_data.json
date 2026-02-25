@@ -1,0 +1,97 @@
+{
+    "round": 20,
+    "platforms": [
+        "DEFCON_2023",
+        "Pwn2Win",
+        "W3C"
+    ],
+    "timestamp": "2026-02-26 23:40:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "DEFCON_2023_Web_Expert_1",
+            "category": "Web",
+            "platform": "DEFCON_2023",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "defcon_2023{...}"
+        },
+        {
+            "name": "DEFCON_2023_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "DEFCON_2023",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "defcon_2023{...}"
+        },
+        {
+            "name": "Pwn2Win_Web_Expert_1",
+            "category": "Web",
+            "platform": "Pwn2Win",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "pwn2win{...}"
+        },
+        {
+            "name": "Pwn2Win_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "Pwn2Win",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "pwn2win{...}"
+        },
+        {
+            "name": "W3C_Web_Expert_1",
+            "category": "Web",
+            "platform": "W3C",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "w3c{...}"
+        },
+        {
+            "name": "W3C_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "W3C",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "w3c{...}"
+        }
+    ]
+}

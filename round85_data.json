@@ -1,0 +1,11 @@
+{
+    "round": 85,
+    "platforms": [
+        "Azure_CTF",
+        "AWS_CTF",
+        "Google_CTF_Cloud"
+    ],
+    "challenges": 6,
+    "points": 3750,
+    "timestamp": "2026-02-26 00:11:22"
+}

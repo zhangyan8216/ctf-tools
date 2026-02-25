@@ -1,0 +1,23 @@
+{
+    "timestamp": "2026-02-25 19:36:46",
+    "total_categories": 3,
+    "total_challenges": 33,
+    "categories": {
+        "historical": {
+            "name": "\u5386\u5e74 CTF \u9898\u76ee",
+            "count": 13,
+            "success_rate": "100%"
+        },
+        "real_world": {
+            "name": "\u771f\u5b9e\u4e16\u754c CTF \u9898\u76ee",
+            "count": 6,
+            "success_rate": "100%"
+        },
+        "advanced": {
+            "name": "\u9ad8\u7ea7 CTF \u9898\u76ee",
+            "count": 14,
+            "total_points": 1340,
+            "success_rate": "100%"
+        }
+    }
+}

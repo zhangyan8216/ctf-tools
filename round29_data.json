@@ -1,0 +1,139 @@
+{
+    "round": 29,
+    "platforms": [
+        "HackThisSite",
+        "RootMe",
+        "HackTheBox_Cry"
+    ],
+    "timestamp": "2026-02-26 24:10:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "HackThisSite_Web_Expert_1",
+            "category": "Web",
+            "platform": "HackThisSite",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hackthissite{...}"
+        },
+        {
+            "name": "HackThisSite_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "HackThisSite",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hackthissite{...}"
+        },
+        {
+            "name": "HackThisSite_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "HackThisSite",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "hackthissite{...}"
+        },
+        {
+            "name": "RootMe_Web_Expert_1",
+            "category": "Web",
+            "platform": "RootMe",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "rootme{...}"
+        },
+        {
+            "name": "RootMe_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "RootMe",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "rootme{...}"
+        },
+        {
+            "name": "RootMe_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "RootMe",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "rootme{...}"
+        },
+        {
+            "name": "HackTheBox_Cry_Web_Expert_1",
+            "category": "Web",
+            "platform": "HackTheBox_Cry",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hackthebox_cry{...}"
+        },
+        {
+            "name": "HackTheBox_Cry_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "HackTheBox_Cry",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hackthebox_cry{...}"
+        },
+        {
+            "name": "HackTheBox_Cry_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "HackTheBox_Cry",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "hackthebox_cry{...}"
+        }
+    ]
+}

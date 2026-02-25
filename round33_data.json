@@ -1,0 +1,139 @@
+{
+    "round": 33,
+    "platforms": [
+        "33C3",
+        "Writeup_CTF",
+        "BSidesSF"
+    ],
+    "timestamp": "2026-02-26 24:18:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "33C3_Web_Expert_1",
+            "category": "Web",
+            "platform": "33C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "33c3{...}"
+        },
+        {
+            "name": "33C3_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "33C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "33c3{...}"
+        },
+        {
+            "name": "33C3_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "33C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "33c3{...}"
+        },
+        {
+            "name": "Writeup_CTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "Writeup_CTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "writeup_ctf{...}"
+        },
+        {
+            "name": "Writeup_CTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "Writeup_CTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "writeup_ctf{...}"
+        },
+        {
+            "name": "Writeup_CTF_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "Writeup_CTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "writeup_ctf{...}"
+        },
+        {
+            "name": "BSidesSF_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesSF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidessf{...}"
+        },
+        {
+            "name": "BSidesSF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesSF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidessf{...}"
+        },
+        {
+            "name": "BSidesSF_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "BSidesSF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "bsidessf{...}"
+        }
+    ]
+}

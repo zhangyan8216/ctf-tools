@@ -1,0 +1,97 @@
+{
+    "round": 36,
+    "platforms": [
+        "BSidesPDX",
+        "BSidesCinc",
+        "BSidesRDU"
+    ],
+    "timestamp": "2026-02-26 24:24:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "BSidesPDX_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesPDX",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidespdx{...}"
+        },
+        {
+            "name": "BSidesPDX_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesPDX",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidespdx{...}"
+        },
+        {
+            "name": "BSidesCinc_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesCinc",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidescinc{...}"
+        },
+        {
+            "name": "BSidesCinc_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesCinc",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidescinc{...}"
+        },
+        {
+            "name": "BSidesRDU_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesRDU",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidesrdu{...}"
+        },
+        {
+            "name": "BSidesRDU_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesRDU",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidesrdu{...}"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "round": 88,
+    "platforms": [
+        "Ubuntu_CTF",
+        "Debian_CTF",
+        "Fedora_CTF"
+    ],
+    "challenges": 6,
+    "points": 3750,
+    "timestamp": "2026-02-26 00:11:22"
+}

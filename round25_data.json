@@ -1,0 +1,139 @@
+{
+    "round": 25,
+    "platforms": [
+        "OverTheWire",
+        "RingZer0",
+        "Wargames"
+    ],
+    "timestamp": "2026-02-26 24:02:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "OverTheWire_Web_Expert_1",
+            "category": "Web",
+            "platform": "OverTheWire",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "overthewire{...}"
+        },
+        {
+            "name": "OverTheWire_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "OverTheWire",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "overthewire{...}"
+        },
+        {
+            "name": "OverTheWire_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "OverTheWire",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "overthewire{...}"
+        },
+        {
+            "name": "RingZer0_Web_Expert_1",
+            "category": "Web",
+            "platform": "RingZer0",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "ringzer0{...}"
+        },
+        {
+            "name": "RingZer0_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "RingZer0",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "ringzer0{...}"
+        },
+        {
+            "name": "RingZer0_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "RingZer0",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "ringzer0{...}"
+        },
+        {
+            "name": "Wargames_Web_Expert_1",
+            "category": "Web",
+            "platform": "Wargames",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "wargames{...}"
+        },
+        {
+            "name": "Wargames_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "Wargames",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "wargames{...}"
+        },
+        {
+            "name": "Wargames_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "Wargames",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "wargames{...}"
+        }
+    ]
+}

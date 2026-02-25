@@ -1,0 +1,97 @@
+{
+    "round": 30,
+    "platforms": [
+        "HackTheBox_Rev",
+        "HackTheBox_Web",
+        "HackTheBox_Misc"
+    ],
+    "timestamp": "2026-02-26 24:12:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "HackTheBox_Rev_Web_Expert_1",
+            "category": "Web",
+            "platform": "HackTheBox_Rev",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hackthebox_rev{...}"
+        },
+        {
+            "name": "HackTheBox_Rev_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "HackTheBox_Rev",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hackthebox_rev{...}"
+        },
+        {
+            "name": "HackTheBox_Web_Web_Expert_1",
+            "category": "Web",
+            "platform": "HackTheBox_Web",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hackthebox_web{...}"
+        },
+        {
+            "name": "HackTheBox_Web_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "HackTheBox_Web",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hackthebox_web{...}"
+        },
+        {
+            "name": "HackTheBox_Misc_Web_Expert_1",
+            "category": "Web",
+            "platform": "HackTheBox_Misc",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hackthebox_misc{...}"
+        },
+        {
+            "name": "HackTheBox_Misc_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "HackTheBox_Misc",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hackthebox_misc{...}"
+        }
+    ]
+}

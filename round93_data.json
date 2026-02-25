@@ -1,0 +1,11 @@
+{
+    "round": 93,
+    "platforms": [
+        "Jenkins_CTF",
+        "GitLab_CTF",
+        "GitHub_CTF"
+    ],
+    "challenges": 6,
+    "points": 3750,
+    "timestamp": "2026-02-26 00:11:22"
+}

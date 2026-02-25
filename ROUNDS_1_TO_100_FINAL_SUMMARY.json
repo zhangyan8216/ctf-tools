@@ -1,0 +1,29 @@
+{
+    "total_rounds": 100,
+    "total_challenges": 448,
+    "total_points": 183495,
+    "total_platforms": 162,
+    "timestamp": "2026-02-26 00:13:12",
+    "stages": {
+        "rounds_1_5": {
+            "challenges": 85,
+            "points": 11860,
+            "platforms": 12
+        },
+        "rounds_6_16": {
+            "challenges": 97,
+            "points": 32685,
+            "platforms": 33
+        },
+        "rounds_17_77": {
+            "challenges": 156,
+            "points": 70200,
+            "platforms": 62
+        },
+        "rounds_78_100": {
+            "challenges": 110,
+            "points": 68750,
+            "platforms": 55
+        }
+    }
+}

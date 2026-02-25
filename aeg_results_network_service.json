@@ -1,0 +1,128 @@
+{
+    "target": {
+        "name": "Network Service",
+        "type": "network",
+        "platform": "TCP",
+        "description": "\u7f51\u7edc\u670d\u52a1"
+    },
+    "analysis": {
+        "target": "Network Service",
+        "type": "network",
+        "platform": "TCP",
+        "analysis_time": "2026-02-25 19:40:55",
+        "vulnerabilities": [
+            {
+                "name": "Buffer Overflow",
+                "severity": "Critical",
+                "confidence": 0.85
+            },
+            {
+                "name": "Protocol Mismatch",
+                "severity": "Medium",
+                "confidence": 0.7
+            }
+        ]
+    },
+    "exploits": [
+        {
+            "vulnerability": "Buffer Overflow",
+            "severity": "Critical",
+            "confidence": 0.85,
+            "generated_at": "2026-02-25 19:40:55",
+            "exploit_type": "Buffer Overflow",
+            "payload": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "steps": [
+                "Determine offset to EIP overwrite",
+                "Check for NX/ASLR protections",
+                "Build ROP chain or use ret2plt",
+                "Inject exploit code",
+                "Achieve code execution"
+            ]
+        },
+        {
+            "vulnerability": "Protocol Mismatch",
+            "severity": "Medium",
+            "confidence": 0.7,
+            "generated_at": "2026-02-25 19:40:55",
+            "exploit_type": "",
+            "payload": "",
+            "steps": []
+        }
+    ],
+    "attack_chain": {
+        "chain_id": "chain_3",
+        "created_at": "2026-02-25 19:40:55",
+        "vulnerabilities": [
+            {
+                "name": "Buffer Overflow",
+                "severity": "Critical",
+                "confidence": 0.85
+            },
+            {
+                "name": "Protocol Mismatch",
+                "severity": "Medium",
+                "confidence": 0.7
+            }
+        ],
+        "exploits": [
+            {
+                "vulnerability": "Buffer Overflow",
+                "severity": "Critical",
+                "confidence": 0.85,
+                "generated_at": "2026-02-25 19:40:55",
+                "exploit_type": "Buffer Overflow",
+                "payload": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "steps": [
+                    "Determine offset to EIP overwrite",
+                    "Check for NX/ASLR protections",
+                    "Build ROP chain or use ret2plt",
+                    "Inject exploit code",
+                    "Achieve code execution"
+                ]
+            },
+            {
+                "vulnerability": "Protocol Mismatch",
+                "severity": "Medium",
+                "confidence": 0.7,
+                "generated_at": "2026-02-25 19:40:55",
+                "exploit_type": "",
+                "payload": "",
+                "steps": []
+            }
+        ],
+        "chain_steps": [
+            {
+                "order": 1,
+                "step": "Buffer Overflow",
+                "description": "Determine offset to EIP overwrite"
+            },
+            {
+                "order": 2,
+                "step": "",
+                "description": "Exploit"
+            }
+        ]
+    },
+    "execution_results": [
+        {
+            "exploit": "Buffer Overflow",
+            "status": "success",
+            "flag": "flag{buffer_overflow_exploited}",
+            "confidence": 0.85,
+            "time": "2026-02-25 19:40:56"
+        },
+        {
+            "exploit": "",
+            "status": "partial",
+            "flag": "flag{_exploited}",
+            "confidence": 0.7,
+            "time": "2026-02-25 19:40:56"
+        }
+    ],
+    "summary": {
+        "vulnerabilities_found": 2,
+        "exploits_generated": 2,
+        "successful_exploits": 1,
+        "average_confidence": 0.7749999999999999
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "round": 32,
+    "platforms": [
+        "36C3",
+        "35C3",
+        "34C3"
+    ],
+    "timestamp": "2026-02-26 24:16:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "36C3_Web_Expert_1",
+            "category": "Web",
+            "platform": "36C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "36c3{...}"
+        },
+        {
+            "name": "36C3_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "36C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "36c3{...}"
+        },
+        {
+            "name": "35C3_Web_Expert_1",
+            "category": "Web",
+            "platform": "35C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "35c3{...}"
+        },
+        {
+            "name": "35C3_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "35C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "35c3{...}"
+        },
+        {
+            "name": "34C3_Web_Expert_1",
+            "category": "Web",
+            "platform": "34C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "34c3{...}"
+        },
+        {
+            "name": "34C3_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "34C3",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "34c3{...}"
+        }
+    ]
+}

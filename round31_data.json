@@ -1,0 +1,139 @@
+{
+    "round": 31,
+    "platforms": [
+        "GoogleCTF_2024",
+        "PlaidCTF_2024",
+        "zer0pts_2024"
+    ],
+    "timestamp": "2026-02-26 24:14:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "GoogleCTF_2024_Web_Expert_1",
+            "category": "Web",
+            "platform": "GoogleCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "googlectf_2024{...}"
+        },
+        {
+            "name": "GoogleCTF_2024_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "GoogleCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "googlectf_2024{...}"
+        },
+        {
+            "name": "GoogleCTF_2024_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "GoogleCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "googlectf_2024{...}"
+        },
+        {
+            "name": "PlaidCTF_2024_Web_Expert_1",
+            "category": "Web",
+            "platform": "PlaidCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "plaidctf_2024{...}"
+        },
+        {
+            "name": "PlaidCTF_2024_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "PlaidCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "plaidctf_2024{...}"
+        },
+        {
+            "name": "PlaidCTF_2024_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "PlaidCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "plaidctf_2024{...}"
+        },
+        {
+            "name": "zer0pts_2024_Web_Expert_1",
+            "category": "Web",
+            "platform": "zer0pts_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "zer0pts_2024{...}"
+        },
+        {
+            "name": "zer0pts_2024_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "zer0pts_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "zer0pts_2024{...}"
+        },
+        {
+            "name": "zer0pts_2024_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "zer0pts_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "zer0pts_2024{...}"
+        }
+    ]
+}

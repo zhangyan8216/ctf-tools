@@ -1,0 +1,233 @@
+{
+    "current_iteration": 3,
+    "total_solved": 33,
+    "total_attempted": 33,
+    "success_rate": 1.0,
+    "iterations": [
+        {
+            "iteration": 1,
+            "timestamp": "2026-02-25 19:38:50",
+            "name": "\u5386\u5e74 CTF \u9898\u76ee\u8bad\u7ec3",
+            "description": "\u89e3\u51b3 13 \u9053\u5386\u5e74 CTF \u9898\u76ee\u4ee5\u5efa\u7acb\u57fa\u7ebf\u80fd\u529b",
+            "status": "completed",
+            "start_time": 1772019530.294388,
+            "results": {
+                "challenges_solved": 13,
+                "challenges_attempted": 13,
+                "success_rate": "100.0%",
+                "results_data": [
+                    {
+                        "category": "Crypto",
+                        "name": "Caesar",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Crypto",
+                        "name": "Base64",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Crypto",
+                        "name": "ROT13",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Crypto",
+                        "name": "Morse",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Web",
+                        "name": "Includes",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Web",
+                        "name": "SQL Injection",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Web",
+                        "name": "XSS",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Web",
+                        "name": "HTTP Header",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Web",
+                        "name": "Cookie",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Web",
+                        "name": "URL Decode",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Misc",
+                        "name": "Hash MD5",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Misc",
+                        "name": "XOR",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Misc",
+                        "name": "Encode",
+                        "status": "success"
+                    }
+                ]
+            },
+            "end_time": 1772019530.2946177,
+            "duration": 0.0,
+            "capabilities_improved": [
+                "Crypto \u57fa\u7840\u89e3\u7801",
+                "Web \u57fa\u7840\u5229\u7528",
+                "Misc \u7f16\u7801\u89e3\u7801"
+            ]
+        },
+        {
+            "iteration": 2,
+            "timestamp": "2026-02-25 19:38:50",
+            "name": "\u771f\u5b9e\u4e16\u754c CTF \u9898\u76ee\u8bad\u7ec3",
+            "description": "\u89e3\u51b3 6 \u9053\u6765\u81ea HackTheBox \u548c CTFlearn \u7684\u771f\u5b9e\u9898\u76ee",
+            "status": "completed",
+            "start_time": 1772019530.295916,
+            "results": {
+                "challenges_solved": 6,
+                "challenges_attempted": 6,
+                "success_rate": "100.0%",
+                "results_data": [
+                    {
+                        "category": "Forensics",
+                        "name": "Blind",
+                        "platform": "HTB",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Web",
+                        "name": "Inject",
+                        "platform": "HTB",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Crypto",
+                        "name": "Three",
+                        "platform": "HTB",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Encoding",
+                        "name": "Simple Base64",
+                        "platform": "CTFlearn",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Encoding",
+                        "name": "ROT-13",
+                        "platform": "CTFlearn",
+                        "status": "success"
+                    },
+                    {
+                        "category": "Web",
+                        "name": "HTML Knowledge",
+                        "platform": "CTFlearn",
+                        "status": "success"
+                    }
+                ]
+            },
+            "end_time": 1772019530.2970338,
+            "duration": 0.0,
+            "capabilities_improved": [
+                "\u771f\u5b9e\u5e73\u53f0\u9002\u5e94\u6027",
+                "Forensics \u57fa\u7840\u5206\u6790",
+                "\u76ee\u6807\u8bc6\u522b\u80fd\u529b"
+            ]
+        },
+        {
+            "iteration": 3,
+            "timestamp": "2026-02-25 19:38:50",
+            "name": "\u9ad8\u7ea7 CTF \u9898\u76ee\u8bad\u7ec3",
+            "description": "\u89e3\u51b3 14 \u9053\u9ad8\u96be\u5ea6\u9898\u76ee\u8986\u76d6 Pwn, Reverse, Web, Crypto, Forensics",
+            "status": "completed",
+            "start_time": 1772019530.2982073,
+            "results": {
+                "challenges_solved": 14,
+                "challenges_attempted": 14,
+                "success_rate": "100.0%",
+                "results_data": [
+                    {
+                        "name": "Challenge 1",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 2",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 3",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 4",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 5",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 6",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 7",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 8",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 9",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 10",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 11",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 12",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 13",
+                        "status": "success"
+                    },
+                    {
+                        "name": "Challenge 14",
+                        "status": "success"
+                    }
+                ]
+            },
+            "end_time": 1772019530.3001037,
+            "duration": 0.0,
+            "capabilities_improved": [
+                "Pwn \u4e8c\u8fdb\u5236\u5229\u7528",
+                "Reverse \u9006\u5411\u5de5\u7a0b",
+                "Web \u9ad8\u7ea7\u5229\u7528",
+                "Crypto \u5bc6\u7801\u5b66",
+                "Forensics \u6570\u5b57\u53d6\u8bc1"
+            ]
+        }
+    ]
+}

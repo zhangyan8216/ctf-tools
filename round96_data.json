@@ -1,0 +1,9 @@
+{
+    "round": 96,
+    "platforms": [
+        "Azure_DevOps_CTF"
+    ],
+    "challenges": 2,
+    "points": 1250,
+    "timestamp": "2026-02-26 00:11:22"
+}

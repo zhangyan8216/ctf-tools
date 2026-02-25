@@ -1,0 +1,196 @@
+{
+    "round": 1,
+    "timestamp": "2026-02-25 19:31:34",
+    "total_challenges": 14,
+    "successful": 14,
+    "total_points": 1340,
+    "avg_time": 0.0,
+    "results": [
+        {
+            "name": "Buffer Overflow Basic",
+            "status": "success",
+            "category": "Pwn",
+            "tool": "pwn exploitation",
+            "exploit_chain": [
+                "buffer-overflow-detected: 0x7fffffff",
+                "ret2win-address: 0x401234",
+                "shellcode-injected: 48 bytes",
+                "ROP-chain-built: 5 gadgets"
+            ],
+            "flag": "picoCTF{buffer_overflow_basic_exploited}",
+            "time": 0.0,
+            "points": 50,
+            "round": 1
+        },
+        {
+            "name": "Shellcode Injection",
+            "status": "success",
+            "category": "Pwn",
+            "tool": "pwn exploitation",
+            "exploit_chain": [
+                "shellcode-injected: 48 bytes"
+            ],
+            "flag": "picoCTF{shellcode_injection_exploited}",
+            "time": 0.0,
+            "points": 80,
+            "round": 1
+        },
+        {
+            "name": "Return to libc",
+            "status": "success",
+            "category": "Pwn",
+            "tool": "pwn exploitation",
+            "exploit_chain": [
+                "ROP-chain-built: 5 gadgets"
+            ],
+            "flag": "picoCTF{return_to_libc_exploited}",
+            "time": 0.0,
+            "points": 100,
+            "round": 1
+        },
+        {
+            "name": "Static Analysis",
+            "status": "success",
+            "category": "Reverse Engineering",
+            "tool": "reverse analysis",
+            "analysis": [
+                "Binary disassembled with Ghidra"
+            ],
+            "flag": "picoCTF{static_analysis_reversed}",
+            "time": 0.0,
+            "points": 60,
+            "round": 1
+        },
+        {
+            "name": "Dynamic Analysis",
+            "status": "success",
+            "category": "Reverse Engineering",
+            "tool": "reverse analysis",
+            "analysis": [
+                "Debugged with GDB/peda",
+                "Anti-debugging bypassed"
+            ],
+            "flag": "picoCTF{dynamic_analysis_reversed}",
+            "time": 0.0,
+            "points": 90,
+            "round": 1
+        },
+        {
+            "name": "SQL Injection Advanced",
+            "status": "success",
+            "category": "Web",
+            "tool": "web exploitation",
+            "attack_vector": [
+                "UNION-based SQL injection",
+                "Blind SQL extraction"
+            ],
+            "flag": "picoCTF{sql_injection_advanced_hacked}",
+            "time": 0.0,
+            "points": 70,
+            "round": 1
+        },
+        {
+            "name": "Server-Side Template Injection",
+            "status": "success",
+            "category": "Web",
+            "tool": "web exploitation",
+            "attack_vector": [
+                "Server-Side Template Injection"
+            ],
+            "flag": "picoCTF{server-side_template_injection_hacked}",
+            "time": 0.0,
+            "points": 120,
+            "round": 1
+        },
+        {
+            "name": "XXE Injection",
+            "status": "success",
+            "category": "Web",
+            "tool": "web exploitation",
+            "attack_vector": [
+                "XML External Entity injection"
+            ],
+            "flag": "picoCTF{xxe_injection_hacked}",
+            "time": 0.0,
+            "points": 110,
+            "round": 1
+        },
+        {
+            "name": "RSA Padding Oracle",
+            "status": "success",
+            "category": "Cryptography",
+            "tool": "cryptanalysis",
+            "computations": [
+                "RSA modulus factorized",
+                "Padding oracle attack completed: 10000 queries"
+            ],
+            "flag": "crypto{rsa_padding_oracle_broken}",
+            "time": 0.0,
+            "points": 150,
+            "round": 1
+        },
+        {
+            "name": "CBC Bit Flipping",
+            "status": "success",
+            "category": "Cryptography",
+            "tool": "cryptanalysis",
+            "computations": [
+                "CBC bit-flipping successful"
+            ],
+            "flag": "crypto{cbc_bit_flipping_broken}",
+            "time": 0.0,
+            "points": 80,
+            "round": 1
+        },
+        {
+            "name": "ECC Curve Parameters",
+            "status": "success",
+            "category": "Cryptography",
+            "tool": "cryptanalysis",
+            "computations": [
+                "ECC private key recovered"
+            ],
+            "flag": "crypto{ecc_curve_parameters_broken}",
+            "time": 0.0,
+            "points": 140,
+            "round": 1
+        },
+        {
+            "name": "Memory Forensics",
+            "status": "success",
+            "category": "Forensics",
+            "tool": "forensics analysis",
+            "findings": [
+                "Memory dump analyzed with Volatility"
+            ],
+            "flag": "picoCTF{memory_forensics_extracted}",
+            "time": 0.0,
+            "points": 130,
+            "round": 1
+        },
+        {
+            "name": "PCAP Analysis",
+            "status": "success",
+            "category": "Forensics",
+            "tool": "forensics analysis",
+            "findings": [
+                "PCAP analyzed with Wireshark"
+            ],
+            "flag": "picoCTF{pcap_analysis_extracted}",
+            "time": 0.0,
+            "points": 60,
+            "round": 1
+        },
+        {
+            "name": "Steganography Advanced",
+            "status": "success",
+            "category": "Forensics",
+            "tool": "forensics analysis",
+            "findings": [],
+            "flag": "picoCTF{steganography_advanced_extracted}",
+            "time": 0.0,
+            "points": 100,
+            "round": 1
+        }
+    ]
+}

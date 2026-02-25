@@ -1,0 +1,97 @@
+{
+    "round": 22,
+    "platforms": [
+        "UIUCTF",
+        "Sunback",
+        "ImaginaryCTF"
+    ],
+    "timestamp": "2026-02-26 23:44:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "UIUCTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "UIUCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "uiuctf{...}"
+        },
+        {
+            "name": "UIUCTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "UIUCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "uiuctf{...}"
+        },
+        {
+            "name": "Sunback_Web_Expert_1",
+            "category": "Web",
+            "platform": "Sunback",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "sunback{...}"
+        },
+        {
+            "name": "Sunback_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "Sunback",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "sunback{...}"
+        },
+        {
+            "name": "ImaginaryCTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "ImaginaryCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "imaginaryctf{...}"
+        },
+        {
+            "name": "ImaginaryCTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "ImaginaryCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "imaginaryctf{...}"
+        }
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "round": 24,
+    "platforms": [
+        "TryHackMe",
+        "PentesterLab",
+        "PortSwigger_Labs"
+    ],
+    "timestamp": "2026-02-26 24:00:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "TryHackMe_Web_Expert_1",
+            "category": "Web",
+            "platform": "TryHackMe",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "tryhackme{...}"
+        },
+        {
+            "name": "TryHackMe_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "TryHackMe",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "tryhackme{...}"
+        },
+        {
+            "name": "PentesterLab_Web_Expert_1",
+            "category": "Web",
+            "platform": "PentesterLab",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "pentesterlab{...}"
+        },
+        {
+            "name": "PentesterLab_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "PentesterLab",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "pentesterlab{...}"
+        },
+        {
+            "name": "PortSwigger_Labs_Web_Expert_1",
+            "category": "Web",
+            "platform": "PortSwigger_Labs",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "portswigger_labs{...}"
+        },
+        {
+            "name": "PortSwigger_Labs_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "PortSwigger_Labs",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "portswigger_labs{...}"
+        }
+    ]
+}

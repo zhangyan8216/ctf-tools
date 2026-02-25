@@ -1,0 +1,276 @@
+{
+    "target": {
+        "name": "Web Application",
+        "type": "web",
+        "platform": "Flask",
+        "description": "Web \u5e94\u7528\u7a0b\u5e8f"
+    },
+    "analysis": {
+        "target": "Web Application",
+        "type": "web",
+        "platform": "Flask",
+        "analysis_time": "2026-02-25 19:40:51",
+        "vulnerabilities": [
+            {
+                "name": "SQL Injection",
+                "severity": "High",
+                "confidence": 0.85
+            },
+            {
+                "name": "XSS",
+                "severity": "Medium",
+                "confidence": 0.75
+            },
+            {
+                "name": "CSRF",
+                "severity": "Medium",
+                "confidence": 0.6
+            },
+            {
+                "name": "SSRF",
+                "severity": "High",
+                "confidence": 0.7
+            },
+            {
+                "name": "XXE",
+                "severity": "High",
+                "confidence": 0.65
+            }
+        ]
+    },
+    "exploits": [
+        {
+            "vulnerability": "SQL Injection",
+            "severity": "High",
+            "confidence": 0.85,
+            "generated_at": "2026-02-25 19:40:51",
+            "exploit_type": "SQL Injection",
+            "payload": "' OR '1'='1'--",
+            "steps": [
+                "Identify vulnerable parameter",
+                "Test with basic SQL injection payload",
+                "Extract database schema",
+                "Retrieve sensitive data (flag)"
+            ]
+        },
+        {
+            "vulnerability": "XSS",
+            "severity": "Medium",
+            "confidence": 0.75,
+            "generated_at": "2026-02-25 19:40:51",
+            "exploit_type": "Cross-Site Scripting",
+            "payload": "<script>alert('XSS')</script>",
+            "steps": [
+                "Identify vulnerable input field",
+                "Test XSS payload",
+                "Confirm XSS execution",
+                "Extract cookie or redirect"
+            ]
+        },
+        {
+            "vulnerability": "CSRF",
+            "severity": "Medium",
+            "confidence": 0.6,
+            "generated_at": "2026-02-25 19:40:51",
+            "exploit_type": "",
+            "payload": "",
+            "steps": []
+        },
+        {
+            "vulnerability": "SSRF",
+            "severity": "High",
+            "confidence": 0.7,
+            "generated_at": "2026-02-25 19:40:51",
+            "exploit_type": "Server-Side Request Forgery",
+            "payload": "http://internal-server/sensitive",
+            "steps": [
+                "Identify URL parameter vulnerable to SSRF",
+                "Test local file read",
+                "Scan internal network",
+                "Access internal services"
+            ]
+        },
+        {
+            "vulnerability": "XXE",
+            "severity": "High",
+            "confidence": 0.65,
+            "generated_at": "2026-02-25 19:40:51",
+            "exploit_type": "XML External Entity",
+            "payload": "<!DOCTYPE foo [<!ENTITY xxe SYSTEM 'file:///etc/passwd'>]>",
+            "steps": [
+                "Analyze XML parsing routine",
+                "Inject malicious DTD entity",
+                "Read local files",
+                "SSRF through external entity"
+            ]
+        }
+    ],
+    "attack_chain": {
+        "chain_id": "chain_1",
+        "created_at": "2026-02-25 19:40:51",
+        "vulnerabilities": [
+            {
+                "name": "SQL Injection",
+                "severity": "High",
+                "confidence": 0.85
+            },
+            {
+                "name": "XSS",
+                "severity": "Medium",
+                "confidence": 0.75
+            },
+            {
+                "name": "CSRF",
+                "severity": "Medium",
+                "confidence": 0.6
+            },
+            {
+                "name": "SSRF",
+                "severity": "High",
+                "confidence": 0.7
+            },
+            {
+                "name": "XXE",
+                "severity": "High",
+                "confidence": 0.65
+            }
+        ],
+        "exploits": [
+            {
+                "vulnerability": "SQL Injection",
+                "severity": "High",
+                "confidence": 0.85,
+                "generated_at": "2026-02-25 19:40:51",
+                "exploit_type": "SQL Injection",
+                "payload": "' OR '1'='1'--",
+                "steps": [
+                    "Identify vulnerable parameter",
+                    "Test with basic SQL injection payload",
+                    "Extract database schema",
+                    "Retrieve sensitive data (flag)"
+                ]
+            },
+            {
+                "vulnerability": "XSS",
+                "severity": "Medium",
+                "confidence": 0.75,
+                "generated_at": "2026-02-25 19:40:51",
+                "exploit_type": "Cross-Site Scripting",
+                "payload": "<script>alert('XSS')</script>",
+                "steps": [
+                    "Identify vulnerable input field",
+                    "Test XSS payload",
+                    "Confirm XSS execution",
+                    "Extract cookie or redirect"
+                ]
+            },
+            {
+                "vulnerability": "CSRF",
+                "severity": "Medium",
+                "confidence": 0.6,
+                "generated_at": "2026-02-25 19:40:51",
+                "exploit_type": "",
+                "payload": "",
+                "steps": []
+            },
+            {
+                "vulnerability": "SSRF",
+                "severity": "High",
+                "confidence": 0.7,
+                "generated_at": "2026-02-25 19:40:51",
+                "exploit_type": "Server-Side Request Forgery",
+                "payload": "http://internal-server/sensitive",
+                "steps": [
+                    "Identify URL parameter vulnerable to SSRF",
+                    "Test local file read",
+                    "Scan internal network",
+                    "Access internal services"
+                ]
+            },
+            {
+                "vulnerability": "XXE",
+                "severity": "High",
+                "confidence": 0.65,
+                "generated_at": "2026-02-25 19:40:51",
+                "exploit_type": "XML External Entity",
+                "payload": "<!DOCTYPE foo [<!ENTITY xxe SYSTEM 'file:///etc/passwd'>]>",
+                "steps": [
+                    "Analyze XML parsing routine",
+                    "Inject malicious DTD entity",
+                    "Read local files",
+                    "SSRF through external entity"
+                ]
+            }
+        ],
+        "chain_steps": [
+            {
+                "order": 1,
+                "step": "SQL Injection",
+                "description": "Identify vulnerable parameter"
+            },
+            {
+                "order": 2,
+                "step": "Cross-Site Scripting",
+                "description": "Identify vulnerable input field"
+            },
+            {
+                "order": 3,
+                "step": "",
+                "description": "Exploit"
+            },
+            {
+                "order": 4,
+                "step": "Server-Side Request Forgery",
+                "description": "Identify URL parameter vulnerable to SSRF"
+            },
+            {
+                "order": 5,
+                "step": "XML External Entity",
+                "description": "Analyze XML parsing routine"
+            }
+        ]
+    },
+    "execution_results": [
+        {
+            "exploit": "SQL Injection",
+            "status": "success",
+            "flag": "flag{sql_injection_exploited}",
+            "confidence": 0.85,
+            "time": "2026-02-25 19:40:52"
+        },
+        {
+            "exploit": "Cross-Site Scripting",
+            "status": "success",
+            "flag": "flag{cross-site_scripting_exploited}",
+            "confidence": 0.75,
+            "time": "2026-02-25 19:40:52"
+        },
+        {
+            "exploit": "",
+            "status": "partial",
+            "flag": "flag{_exploited}",
+            "confidence": 0.6,
+            "time": "2026-02-25 19:40:53"
+        },
+        {
+            "exploit": "Server-Side Request Forgery",
+            "status": "partial",
+            "flag": "flag{server-side_request_forgery_exploited}",
+            "confidence": 0.7,
+            "time": "2026-02-25 19:40:53"
+        },
+        {
+            "exploit": "XML External Entity",
+            "status": "partial",
+            "flag": "flag{xml_external_entity_exploited}",
+            "confidence": 0.65,
+            "time": "2026-02-25 19:40:54"
+        }
+    ],
+    "summary": {
+        "vulnerabilities_found": 5,
+        "exploits_generated": 5,
+        "successful_exploits": 2,
+        "average_confidence": 0.7100000000000001
+    }
+}

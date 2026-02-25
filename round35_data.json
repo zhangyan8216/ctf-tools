@@ -1,0 +1,139 @@
+{
+    "round": 35,
+    "platforms": [
+        "BSidesCL",
+        "BSidesBH",
+        "BSidesCMB"
+    ],
+    "timestamp": "2026-02-26 24:22:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "BSidesCL_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesCL",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidescl{...}"
+        },
+        {
+            "name": "BSidesCL_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesCL",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidescl{...}"
+        },
+        {
+            "name": "BSidesCL_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "BSidesCL",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "bsidescl{...}"
+        },
+        {
+            "name": "BSidesBH_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesBH",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidesbh{...}"
+        },
+        {
+            "name": "BSidesBH_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesBH",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidesbh{...}"
+        },
+        {
+            "name": "BSidesBH_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "BSidesBH",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "bsidesbh{...}"
+        },
+        {
+            "name": "BSidesCMB_Web_Expert_1",
+            "category": "Web",
+            "platform": "BSidesCMB",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bsidescmb{...}"
+        },
+        {
+            "name": "BSidesCMB_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BSidesCMB",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bsidescmb{...}"
+        },
+        {
+            "name": "BSidesCMB_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "BSidesCMB",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "bsidescmb{...}"
+        }
+    ]
+}

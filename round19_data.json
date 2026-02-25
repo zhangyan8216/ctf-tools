@@ -1,0 +1,139 @@
+{
+    "round": 19,
+    "platforms": [
+        "MidnightSun",
+        "KalmarUnion",
+        "BCTF_2024"
+    ],
+    "timestamp": "2026-02-26 23:38:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "MidnightSun_Web_Expert_1",
+            "category": "Web",
+            "platform": "MidnightSun",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "midnightsun{...}"
+        },
+        {
+            "name": "MidnightSun_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "MidnightSun",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "midnightsun{...}"
+        },
+        {
+            "name": "MidnightSun_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "MidnightSun",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "midnightsun{...}"
+        },
+        {
+            "name": "KalmarUnion_Web_Expert_1",
+            "category": "Web",
+            "platform": "KalmarUnion",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "kalmarunion{...}"
+        },
+        {
+            "name": "KalmarUnion_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "KalmarUnion",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "kalmarunion{...}"
+        },
+        {
+            "name": "KalmarUnion_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "KalmarUnion",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "kalmarunion{...}"
+        },
+        {
+            "name": "BCTF_2024_Web_Expert_1",
+            "category": "Web",
+            "platform": "BCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "bctf_2024{...}"
+        },
+        {
+            "name": "BCTF_2024_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "BCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "bctf_2024{...}"
+        },
+        {
+            "name": "BCTF_2024_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "BCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "bctf_2024{...}"
+        }
+    ]
+}

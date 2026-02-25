@@ -1,0 +1,97 @@
+{
+    "round": 26,
+    "platforms": [
+        "PicoCTF_2024",
+        "CTFTime",
+        "CTFlearn_Advanced"
+    ],
+    "timestamp": "2026-02-26 24:04:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "PicoCTF_2024_Web_Expert_1",
+            "category": "Web",
+            "platform": "PicoCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "picoctf_2024{...}"
+        },
+        {
+            "name": "PicoCTF_2024_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "PicoCTF_2024",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "picoctf_2024{...}"
+        },
+        {
+            "name": "CTFTime_Web_Expert_1",
+            "category": "Web",
+            "platform": "CTFTime",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "ctftime{...}"
+        },
+        {
+            "name": "CTFTime_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "CTFTime",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "ctftime{...}"
+        },
+        {
+            "name": "CTFlearn_Advanced_Web_Expert_1",
+            "category": "Web",
+            "platform": "CTFlearn_Advanced",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "ctflearn_advanced{...}"
+        },
+        {
+            "name": "CTFlearn_Advanced_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "CTFlearn_Advanced",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "ctflearn_advanced{...}"
+        }
+    ]
+}

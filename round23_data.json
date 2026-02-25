@@ -1,0 +1,139 @@
+{
+    "round": 23,
+    "platforms": [
+        "CyberBattlefield",
+        "Hacker101",
+        "HackTheBox_CTF"
+    ],
+    "timestamp": "2026-02-26 23:46:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "CyberBattlefield_Web_Expert_1",
+            "category": "Web",
+            "platform": "CyberBattlefield",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "cyberbattlefield{...}"
+        },
+        {
+            "name": "CyberBattlefield_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "CyberBattlefield",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "cyberbattlefield{...}"
+        },
+        {
+            "name": "CyberBattlefield_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "CyberBattlefield",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "cyberbattlefield{...}"
+        },
+        {
+            "name": "Hacker101_Web_Expert_1",
+            "category": "Web",
+            "platform": "Hacker101",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hacker101{...}"
+        },
+        {
+            "name": "Hacker101_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "Hacker101",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hacker101{...}"
+        },
+        {
+            "name": "Hacker101_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "Hacker101",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "hacker101{...}"
+        },
+        {
+            "name": "HackTheBox_CTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "HackTheBox_CTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hackthebox_ctf{...}"
+        },
+        {
+            "name": "HackTheBox_CTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "HackTheBox_CTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hackthebox_ctf{...}"
+        },
+        {
+            "name": "HackTheBox_CTF_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "HackTheBox_CTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "hackthebox_ctf{...}"
+        }
+    ]
+}

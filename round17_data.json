@@ -1,0 +1,139 @@
+{
+    "round": 17,
+    "platforms": [
+        "CakeCTF",
+        "DeutscheCTF",
+        "HackTM_Belegost"
+    ],
+    "timestamp": "2026-02-26 23:34:00",
+    "total_new_challenges": 9,
+    "total_new_points": 4050,
+    "challenges": [
+        {
+            "name": "CakeCTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "CakeCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "cakectf{...}"
+        },
+        {
+            "name": "CakeCTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "CakeCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "cakectf{...}"
+        },
+        {
+            "name": "CakeCTF_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "CakeCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "cakectf{...}"
+        },
+        {
+            "name": "DeutscheCTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "DeutscheCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "deutschectf{...}"
+        },
+        {
+            "name": "DeutscheCTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "DeutscheCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "deutschectf{...}"
+        },
+        {
+            "name": "DeutscheCTF_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "DeutscheCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "deutschectf{...}"
+        },
+        {
+            "name": "HackTM_Belegost_Web_Expert_1",
+            "category": "Web",
+            "platform": "HackTM_Belegost",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "hacktm_belegost{...}"
+        },
+        {
+            "name": "HackTM_Belegost_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "HackTM_Belegost",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "hacktm_belegost{...}"
+        },
+        {
+            "name": "HackTM_Belegost_Crypto_Expert_3",
+            "category": "Crypto",
+            "platform": "HackTM_Belegost",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 450,
+            "techniques": [
+                "lattice",
+                "post-quantum",
+                "broken"
+            ],
+            "flag_format": "hacktm_belegost{...}"
+        }
+    ]
+}

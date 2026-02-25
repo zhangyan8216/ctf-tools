@@ -1,0 +1,97 @@
+{
+    "round": 18,
+    "platforms": [
+        "JustCTF",
+        "SekaiCTF",
+        "DragonSector"
+    ],
+    "timestamp": "2026-02-26 23:36:00",
+    "total_new_challenges": 6,
+    "total_new_points": 2700,
+    "challenges": [
+        {
+            "name": "JustCTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "JustCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "justctf{...}"
+        },
+        {
+            "name": "JustCTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "JustCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "justctf{...}"
+        },
+        {
+            "name": "SekaiCTF_Web_Expert_1",
+            "category": "Web",
+            "platform": "SekaiCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "sekaictf{...}"
+        },
+        {
+            "name": "SekaiCTF_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "SekaiCTF",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "sekaictf{...}"
+        },
+        {
+            "name": "DragonSector_Web_Expert_1",
+            "category": "Web",
+            "platform": "DragonSector",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 400,
+            "techniques": [
+                "advanced",
+                "exploit",
+                "RCE"
+            ],
+            "flag_format": "dragonsector{...}"
+        },
+        {
+            "name": "DragonSector_Binary_Expert_2",
+            "category": "Pwn",
+            "platform": "DragonSector",
+            "year": "2024",
+            "difficulty": "Expert",
+            "points": 500,
+            "techniques": [
+                "heap",
+                "kernel",
+                "escape"
+            ],
+            "flag_format": "dragonsector{...}"
+        }
+    ]
+}
