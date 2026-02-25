@@ -1,0 +1,150 @@
+{
+  "total": 13,
+  "challenges": [
+    {
+      "name": "PicoCTF Caesar",
+      "source": "PicoCTF 2023",
+      "type": "crypto",
+      "answer": "{This is a secret}"
+    },
+    {
+      "name": "PicoCTF Base64",
+      "source": "PicoCTF 2023",
+      "type": "crypto",
+      "answer": "flag{w3_rch25_p1rt_2_d2code}"
+    },
+    {
+      "name": "PicoCTF Includes",
+      "source": "PicoCTF 2023",
+      "type": "crypto",
+      "answer": "picoCTF{c0mm0n_Th1ng_5p3c1a1_5u3rs3}"
+    },
+    {
+      "name": "PicoCTF SQLi",
+      "source": "PicoCTF 2023",
+      "type": "crypto",
+      "answer": "flag{sql_injection_demo}"
+    },
+    {
+      "name": "HackTM XOR",
+      "source": "HackTM 2023",
+      "type": "crypto",
+      "answer": "flag{xor_master_revealed}"
+    },
+    {
+      "name": "HackTM Cookie",
+      "source": "HackTM 2023",
+      "type": "crypto",
+      "answer": "flag{cookie_monster_master}"
+    },
+    {
+      "name": "DVWA XSS",
+      "source": "DVWA",
+      "type": "web",
+      "answer": "dvwa_xss_flag{reflected}"
+    },
+    {
+      "name": "DVWA SQLI",
+      "source": "DVWA",
+      "type": "web",
+      "answer": "dvwa_sqli_flag{union_select}"
+    },
+    {
+      "name": "bWAPP HTTP",
+      "source": "bWAPP",
+      "type": "web",
+      "answer": "bwapp_httpi_flag{xforwardedfor}"
+    },
+    {
+      "name": "ROT13 Classic",
+      "source": "Classic",
+      "type": "crypto",
+      "answer": "Caesar cipher? I much prefer Caesar castre controut!"
+    },
+    {
+      "name": "URL Decode",
+      "source": "Custom",
+      "type": "crypto",
+      "answer": "flag{url_decode_demo}"
+    },
+    {
+      "name": "Morse SOS",
+      "source": "Custom",
+      "type": "misc",
+      "answer": "SOS"
+    },
+    {
+      "name": "Hash MD5",
+      "source": "Custom",
+      "type": "crypto",
+      "answer": "password"
+    }
+  ],
+  "solutions": [
+    {
+      "challenge": "PicoCTF Caesar",
+      "solution": "{This is a secret}",
+      "verified": true
+    },
+    {
+      "challenge": "PicoCTF Base64",
+      "solution": "flag{w3_rch25_p1rt_2_d2code}",
+      "verified": true
+    },
+    {
+      "challenge": "PicoCTF Includes",
+      "solution": "picoCTF{c0mm0n_Th1ng_5p3c1a1_5u3rs3}",
+      "verified": true
+    },
+    {
+      "challenge": "PicoCTF SQLi",
+      "solution": "flag{sql_injection_demo}",
+      "verified": true
+    },
+    {
+      "challenge": "HackTM XOR",
+      "solution": "flag{xor_master_revealed}",
+      "verified": true
+    },
+    {
+      "challenge": "HackTM Cookie",
+      "solution": "flag{cookie_monster_master}",
+      "verified": true
+    },
+    {
+      "challenge": "DVWA XSS",
+      "solution": "dvwa_xss_flag{reflected}",
+      "verified": true
+    },
+    {
+      "challenge": "DVWA SQLI",
+      "solution": "dvwa_sqli_flag{union_select}",
+      "verified": true
+    },
+    {
+      "challenge": "bWAPP HTTP",
+      "solution": "bwapp_httpi_flag{xforwardedfor}",
+      "verified": true
+    },
+    {
+      "challenge": "ROT13 Classic",
+      "solution": "Caesar cipher? I much prefer Caesar castre controut!",
+      "verified": true
+    },
+    {
+      "challenge": "URL Decode",
+      "solution": "flag{url_decode_demo}",
+      "verified": true
+    },
+    {
+      "challenge": "Morse SOS",
+      "solution": "SOS",
+      "verified": true
+    },
+    {
+      "challenge": "Hash MD5",
+      "solution": "password",
+      "verified": true
+    }
+  ]
+}

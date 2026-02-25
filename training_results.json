@@ -1,0 +1,14 @@
+{
+  "training_history": [],
+  "database_size": 13,
+  "categories": [
+    "crypto",
+    "misc",
+    "web"
+  ],
+  "difficulties": [
+    "easy",
+    "hard",
+    "medium"
+  ]
+}
