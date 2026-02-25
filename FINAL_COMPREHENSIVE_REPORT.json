@@ -1,0 +1,64 @@
+{
+    "timestamp": "2025-02-25 20:15:00",
+    "total_platforms": 9,
+    "total_challenges": 85,
+    "successful_challenges": 77,
+    "success_rate": "90.6%",
+    "total_points": 11860,
+    "platforms": {
+        "\u5386\u5e74\u9898\u76ee": {
+            "file": "training_data.json",
+            "count": 13,
+            "platform": "\u5386\u5e74",
+            "status": "100%"
+        },
+        "\u771f\u5b9e\u9898\u76ee": {
+            "file": "real_world_ctf_results.json",
+            "platform": "HackTheBox, CTFlearn",
+            "count": 6,
+            "status": "100%"
+        },
+        "\u9ad8\u7ea7\u9898\u76ee": {
+            "file": "agent_training_final.json",
+            "platform": "PicoCTF, PortSwigger, CryptoHack",
+            "count": 14,
+            "status": "100%"
+        },
+        "\u6269\u5c55\u9898\u76ee": {
+            "file": "expanded_ctf_training.json",
+            "platform": "Advanced Extended",
+            "count": 8,
+            "status": "\u5df2\u90e8\u7f72"
+        },
+        "XCTF": {
+            "file": "xctf_results.json",
+            "platform": "XCTF (2022-2023)",
+            "count": 16,
+            "status": "100%"
+        },
+        "BCTF": {
+            "file": "bctf_results.json",
+            "platform": "BCTF (\u84dd\u83b2\u82b1)",
+            "count": 9,
+            "status": "100%"
+        },
+        "0CTF": {
+            "file": "octf_results.json",
+            "platform": "0CTF (\u96f6CTF)",
+            "count": 5,
+            "status": "100%"
+        },
+        "QWB": {
+            "file": "qwb_results.json",
+            "platform": "QWB (\u5f3a\u7f51\u676f)",
+            "count": 4,
+            "status": "100%"
+        },
+        "LILCTF2025": {
+            "file": "lilctf2025_results.json",
+            "platform": "LILCTF2025 (\u6700\u65b0)",
+            "count": 10,
+            "status": "100%"
+        }
+    }
+}
