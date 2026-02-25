@@ -1,0 +1,61 @@
+{
+    "rounds": [
+        {
+            "\u8f6e\u6b21": "\u7b2c6\u8f6e",
+            "\u5e73\u53f0": [
+                "CCTF",
+                "ByteCTF",
+                "DEFCON CTF"
+            ],
+            "\u9898\u76ee": 22,
+            "\u5206\u6570": 5000,
+            "\u72b6\u6001": "\u2705 \u5b8c\u6210",
+            "\u63cf\u8ff0": "CCTF (10\u9898), ByteCTF (6\u9898), DEFCON CTF (6\u9898)"
+        },
+        {
+            "\u8f6e\u6b21": "\u7b2c7\u8f6e",
+            "\u5e73\u53f0": [
+                "SecurityTrails",
+                "BlackHat",
+                "GhostInTheShell"
+            ],
+            "\u9898\u76ee": 8,
+            "\u5206\u6570": 915,
+            "\u72b6\u6001": "\u2705 \u5b8c\u6210",
+            "\u63cf\u8ff0": "SecurityTrails (3\u9898), BlackHat (2\u9898), GhostInTheShell (3\u9898)"
+        },
+        {
+            "\u8f6e\u6b21": "\u7b2c8\u8f6e",
+            "\u5e73\u53f0": [
+                "AttackDefense",
+                "HackTM\u6269\u5c55",
+                "TCTF"
+            ],
+            "\u9898\u76ee": 8,
+            "\u5206\u6570": 710,
+            "\u72b6\u6001": "\u2705 \u5b8c\u6210",
+            "\u63cf\u8ff0": "AttackDefense (3\u9898), HackTM (2\u9898), TCTF (3\u9898)"
+        }
+    ],
+    "summary": {
+        "\u8f6e\u6b21\u6570": 3,
+        "\u603b\u65b0\u589e\u5e73\u53f0": 9,
+        "\u53bb\u91cd\u5e73\u53f0\u6570": 9,
+        "\u603b\u65b0\u589e\u9898\u76ee": 38,
+        "\u603b\u65b0\u589e\u5206\u6570": 6625,
+        "\u4e4b\u524d\u9898\u76ee": 85,
+        "\u73b0\u5728\u603b\u8ba1": 123,
+        "\u6240\u6709\u5e73\u53f0": [
+            "HackTM\u6269\u5c55",
+            "DEFCON CTF",
+            "ByteCTF",
+            "AttackDefense",
+            "GhostInTheShell",
+            "CCTF",
+            "SecurityTrails",
+            "TCTF",
+            "BlackHat"
+        ],
+        "timestamp": "2026-02-25 21:15:00"
+    }
+}
