@@ -1,0 +1,151 @@
+{
+    "round": 10,
+    "platforms": [
+        "realctf",
+        "dragonctf",
+        "mhs_ctf"
+    ],
+    "total_new_challenges": 8,
+    "total_new_points": 3310,
+    "timestamp": "2026-02-25 22:45:00",
+    "categories": {
+        "realctf": {
+            "pwn": [
+                {
+                    "name": "Stack_Canary_Bypass",
+                    "category": "Pwn",
+                    "platform": "RealCTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 450,
+                    "techniques": [
+                        "canary",
+                        "stack",
+                        "leak",
+                        "ROP"
+                    ],
+                    "flag_format": "realctf{...}"
+                },
+                {
+                    "name": "House_of_Lore",
+                    "category": "Pwn",
+                    "platform": "RealCTF",
+                    "year": "2024",
+                    "difficulty": "Expert",
+                    "points": 500,
+                    "techniques": [
+                        "heap",
+                        "tcache",
+                        "House of Lore",
+                        "fastbin"
+                    ],
+                    "flag_format": "realctf{...}"
+                }
+            ],
+            "crypto": [
+                {
+                    "name": "ECC_Curve_Nist",
+                    "category": "Cryptography",
+                    "platform": "RealCTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 420,
+                    "techniques": [
+                        "ECC",
+                        "NIST curve",
+                        "CVP",
+                        "skeleton key"
+                    ],
+                    "flag_format": "realctf{...}"
+                }
+            ]
+        },
+        "dragonctf": {
+            "web": [
+                {
+                    "name": "Weblogic_CVE",
+                    "category": "Web",
+                    "platform": "DragonCTF",
+                    "year": "2022",
+                    "difficulty": "Expert",
+                    "points": 400,
+                    "techniques": [
+                        "deserialization",
+                        "T3",
+                        "RCE",
+                        "WebLogic"
+                    ],
+                    "flag_format": "dragonctf{...}"
+                },
+                {
+                    "name": "Java_Sandbox",
+                    "category": "Web",
+                    "platform": "DragonCTF",
+                    "year": "2023",
+                    "difficulty": "Expert",
+                    "points": 460,
+                    "techniques": [
+                        "Java",
+                        "sandbox",
+                        "JVM",
+                        "escape"
+                    ],
+                    "flag_format": "dragonctf{...}"
+                }
+            ],
+            "pwn": [
+                {
+                    "name": "Kernel_UAF",
+                    "category": "Pwn",
+                    "platform": "DragonCTF",
+                    "year": "2022",
+                    "difficulty": "Expert",
+                    "points": 480,
+                    "techniques": [
+                        "kernel",
+                        "UAF",
+                        "slab",
+                        "heap"
+                    ],
+                    "flag_format": "dragonctf{...}"
+                }
+            ]
+        },
+        "mhs_ctf": {
+            "misc": [
+                {
+                    "name": "Memory_Artifact",
+                    "category": "Misc",
+                    "platform": "MHS-CTF",
+                    "year": "2024",
+                    "difficulty": "Hard",
+                    "points": 280,
+                    "techniques": [
+                        "memory",
+                        "forensics",
+                        "artifact",
+                        "analysis"
+                    ],
+                    "flag_format": "mhs{...}"
+                }
+            ],
+            "reverse": [
+                {
+                    "name": "Android_APK",
+                    "category": "Reverse",
+                    "platform": "MHS-CTF",
+                    "year": "2023",
+                    "difficulty": "Hard",
+                    "points": 320,
+                    "techniques": [
+                        "Android",
+                        "APK",
+                        "reverse",
+                        "smali"
+                    ],
+                    "flag_format": "mhs{...}"
+                }
+            ]
+        }
+    }
+}
