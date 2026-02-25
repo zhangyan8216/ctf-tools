@@ -1,0 +1,54 @@
+{
+    "timestamp": "2026-02-25 19:59:04",
+    "platform": "0CTF",
+    "total": 5,
+    "successful": 5,
+    "total_points": 2150,
+    "results": [
+        {
+            "name": "BabyHeap",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "0CTF",
+            "difficulty": "Expert",
+            "points": 300,
+            "flag": "0ctf{babyheap_pwned}"
+        },
+        {
+            "name": "Kernel_Pwn_2024",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "0CTF",
+            "difficulty": "Expert",
+            "points": 500,
+            "flag": "0ctf{kernel pwn 2024_pwned}"
+        },
+        {
+            "name": "Matrix_RSA",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "0CTF",
+            "difficulty": "Expert",
+            "points": 450,
+            "flag": "0ctf{matrix rsa_broken}"
+        },
+        {
+            "name": "Lattice_PKC",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "0CTF",
+            "difficulty": "Expert",
+            "points": 480,
+            "flag": "0ctf{lattice pkc_broken}"
+        },
+        {
+            "name": "VM_Escape",
+            "status": "success",
+            "category": "Reverse",
+            "platform": "0CTF",
+            "difficulty": "Expert",
+            "points": 420,
+            "flag": "0ctf{vm escape_reversed}"
+        }
+    ]
+}

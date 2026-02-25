@@ -1,0 +1,95 @@
+{
+    "system": "0CTF Training System",
+    "platform": "0CTF (\u96f6CTF)",
+    "quality": "Expert/Highest",
+    "total_challenges": 5,
+    "total_points": 2150,
+    "categories": {
+        "pwn_octf": [
+            {
+                "name": "BabyHeap",
+                "category": "Pwn",
+                "platform": "0CTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "description": "Heap exploitation with custom allocator",
+                "points": 300,
+                "techniques": [
+                    "heap",
+                    "fastbin",
+                    "tcache",
+                    "UAF"
+                ],
+                "flag_format": "0ctf{...}"
+            },
+            {
+                "name": "Kernel_Pwn_2024",
+                "category": "Pwn",
+                "platform": "0CTF",
+                "year": "2024",
+                "difficulty": "Expert",
+                "description": "Advanced kernel exploitation",
+                "points": 500,
+                "techniques": [
+                    "kernel",
+                    "cred",
+                    "ptm",
+                    "KPTI"
+                ],
+                "flag_format": "0ctf{...}"
+            }
+        ],
+        "crypto_octf": [
+            {
+                "name": "Matrix_RSA",
+                "category": "Cryptography",
+                "platform": "0CTF",
+                "year": "2023",
+                "difficulty": "Expert",
+                "description": "Multi-prime RSA with matrix encryption",
+                "points": 450,
+                "techniques": [
+                    "RSA",
+                    "multi-prime",
+                    "CRT",
+                    "Hastad"
+                ],
+                "flag_format": "0ctf{...}"
+            },
+            {
+                "name": "Lattice_PKC",
+                "category": "Cryptography",
+                "platform": "0CTF",
+                "year": "2024",
+                "difficulty": "Expert",
+                "description": "Lattice-based public key crypto",
+                "points": 480,
+                "techniques": [
+                    "lattice",
+                    "NTRU",
+                    "BKZ",
+                    "LLL"
+                ],
+                "flag_format": "0ctf{...}"
+            }
+        ],
+        "reverse_octf": [
+            {
+                "name": "VM_Escape",
+                "category": "Reverse",
+                "platform": "0CTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "description": "Escape from custom VM sandbox",
+                "points": 420,
+                "techniques": [
+                    "vm",
+                    "reverse",
+                    "escape",
+                    "sandbox"
+                ],
+                "flag_format": "0ctf{...}"
+            }
+        ]
+    }
+}
