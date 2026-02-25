@@ -1,0 +1,90 @@
+{
+    "round": 7,
+    "platforms": {
+        "SecurityTrails": {
+            "description": "SecurityTrails CTF \u5e73\u53f0",
+            "platform": "SecurityTrails",
+            "challenges": [
+                {
+                    "name": "SQLi_Beginner",
+                    "cat": "Web",
+                    "points": 30,
+                    "tech": [
+                        "SQLi"
+                    ]
+                },
+                {
+                    "name": "XSS_Practice",
+                    "cat": "Web",
+                    "points": 40,
+                    "tech": [
+                        "XSS"
+                    ]
+                },
+                {
+                    "name": "Forensics_Basic",
+                    "cat": "Misc",
+                    "points": 35,
+                    "tech": [
+                        "forensics"
+                    ]
+                }
+            ]
+        },
+        "BlackHat": {
+            "description": "Black Hat CTF Quals",
+            "platform": "BlackHat",
+            "challenges": [
+                {
+                    "name": "BHE_Web",
+                    "cat": "Web",
+                    "points": 150,
+                    "tech": [
+                        "advanced-web"
+                    ]
+                },
+                {
+                    "name": "BHE_Pwn",
+                    "cat": "Pwn",
+                    "points": 200,
+                    "tech": [
+                        "kernel-pwn"
+                    ]
+                }
+            ]
+        },
+        "GhostInTheShell": {
+            "description": "GhostInTheShell Code Blue",
+            "platform": "GhostInTheShell",
+            "challenges": [
+                {
+                    "name": "Web_Challenge_1",
+                    "cat": "Web",
+                    "points": 120,
+                    "tech": [
+                        "injection"
+                    ]
+                },
+                {
+                    "name": "Crypto_Challenge_1",
+                    "cat": "Crypto",
+                    "points": 180,
+                    "tech": [
+                        "advanced"
+                    ]
+                },
+                {
+                    "name": "Reverse_Challenge_1",
+                    "cat": "Reverse",
+                    "points": 160,
+                    "tech": [
+                        "obfuscation"
+                    ]
+                }
+            ]
+        }
+    },
+    "total_challenges": 8,
+    "total_points": 915,
+    "timestamp": "2026-02-25 20:59:24"
+}
