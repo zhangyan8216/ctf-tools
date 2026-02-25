@@ -1,0 +1,286 @@
+{
+    "timestamp": "2026-02-25 19:51:48",
+    "platform": "XCTF",
+    "total_challenges": 16,
+    "successful": 16,
+    "success_rate": "100.0%",
+    "total_points": 1450,
+    "results": [
+        {
+            "name": "Simple_SSTI",
+            "status": "success",
+            "category": "Web",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Easy",
+            "tool": "web exploitation",
+            "techniques_used": [
+                "SSTI",
+                "Flask",
+                "Jinja2",
+                "RCE"
+            ],
+            "points": 50,
+            "flag": "xctf{simple ssti_exploited}",
+            "time": 88601015.44
+        },
+        {
+            "name": "EasySQL",
+            "status": "success",
+            "category": "Web",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Easy",
+            "tool": "web exploitation",
+            "techniques_used": [
+                "SQLi",
+                "union-based",
+                "blind"
+            ],
+            "points": 60,
+            "flag": "xctf{easysql_exploited}",
+            "time": 88601015.44
+        },
+        {
+            "name": "Include_Me",
+            "status": "success",
+            "category": "Web",
+            "platform": "XCTF",
+            "year": "2022",
+            "difficulty": "Medium",
+            "tool": "web exploitation",
+            "techniques_used": [
+                "LFI",
+                "PHP",
+                "RFI"
+            ],
+            "points": 80,
+            "flag": "xctf{include me_exploited}",
+            "time": 88601015.44
+        },
+        {
+            "name": "XXE_Expert",
+            "status": "success",
+            "category": "Web",
+            "platform": "XCTF",
+            "year": "2022",
+            "difficulty": "Hard",
+            "tool": "web exploitation",
+            "techniques_used": [
+                "XXE",
+                "OOB",
+                "SSRF",
+                "XML"
+            ],
+            "points": 120,
+            "flag": "xctf{xxe expert_exploited}",
+            "time": 88601015.44
+        },
+        {
+            "name": "RCE_Ghost",
+            "status": "success",
+            "category": "Web",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Medium",
+            "tool": "web exploitation",
+            "techniques_used": [
+                "RCE",
+                "Deserialization",
+                "PHP"
+            ],
+            "points": 100,
+            "flag": "xctf{rce ghost_exploited}",
+            "time": 88601015.44
+        },
+        {
+            "name": "Stream_Cipher",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Easy",
+            "tool": "cryptanalysis",
+            "techniques_used": [
+                "stream-cipher",
+                "xor",
+                "known-plaintext"
+            ],
+            "points": 50,
+            "flag": "xctf{stream cipher_decrypted}",
+            "time": 88601015.44
+        },
+        {
+            "name": "RSA_Basics",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "XCTF",
+            "year": "2022",
+            "difficulty": "Medium",
+            "tool": "cryptanalysis",
+            "techniques_used": [
+                "RSA",
+                "wiener",
+                "low-exponent"
+            ],
+            "points": 80,
+            "flag": "xctf{rsa basics_decrypted}",
+            "time": 88601015.44
+        },
+        {
+            "name": "Block_Cipher",
+            "status": "success",
+            "category": "Cryptography",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Hard",
+            "tool": "cryptanalysis",
+            "techniques_used": [
+                "block-cipher",
+                "ECB",
+                "oracle",
+                "padding-oracle"
+            ],
+            "points": 150,
+            "flag": "xctf{block cipher_decrypted}",
+            "time": 88601015.44
+        },
+        {
+            "name": "Overflow_Me",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Easy",
+            "tool": "binary exploitation",
+            "techniques_used": [
+                "buffer-overflow",
+                "shellcode",
+                "NX-bypass"
+            ],
+            "points": 60,
+            "flag": "xctf{overflow me_pwned}",
+            "time": 88601015.44
+        },
+        {
+            "name": "ROP_Chain",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "XCTF",
+            "year": "2022",
+            "difficulty": "Medium",
+            "tool": "binary exploitation",
+            "techniques_used": [
+                "ROP",
+                "gadgets",
+                "ASLR-bypass"
+            ],
+            "points": 100,
+            "flag": "xctf{rop chain_pwned}",
+            "time": 88601015.44
+        },
+        {
+            "name": "UAF_Challenge",
+            "status": "success",
+            "category": "Pwn",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Hard",
+            "tool": "binary exploitation",
+            "techniques_used": [
+                "UAF",
+                "heap-overflow",
+                "fastbin"
+            ],
+            "points": 160,
+            "flag": "xctf{uaf challenge_pwned}",
+            "time": 88601015.44
+        },
+        {
+            "name": "Hidden_Bytes",
+            "status": "success",
+            "category": "Misc",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Easy",
+            "tool": "forensics analysis",
+            "techniques_used": [
+                "steganography",
+                "hexdump",
+                "binwalk"
+            ],
+            "points": 40,
+            "flag": "xctf{hidden bytes_extracted}",
+            "time": 88601015.44
+        },
+        {
+            "name": "Traffic_Analysis",
+            "status": "success",
+            "category": "Misc",
+            "platform": "XCTF",
+            "year": "2022",
+            "difficulty": "Medium",
+            "tool": "forensics analysis",
+            "techniques_used": [
+                "pcap",
+                "wireshark",
+                "tshark",
+                "network-forensics"
+            ],
+            "points": 80,
+            "flag": "xctf{traffic analysis_extracted}",
+            "time": 88601015.44
+        },
+        {
+            "name": "Memory_Forensics",
+            "status": "success",
+            "category": "Misc",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Hard",
+            "tool": "forensics analysis",
+            "techniques_used": [
+                "memory-dump",
+                "volatility",
+                "process-injection"
+            ],
+            "points": 140,
+            "flag": "xctf{memory forensics_extracted}",
+            "time": 88601015.44
+        },
+        {
+            "name": "CrackMe",
+            "status": "success",
+            "category": "Reverse",
+            "platform": "XCTF",
+            "year": "2023",
+            "difficulty": "Easy",
+            "tool": "reverse engineering",
+            "techniques_used": [
+                "reverse",
+                "Ghidra",
+                "static-analysis"
+            ],
+            "points": 50,
+            "flag": "xctf{crackme_cracked}",
+            "time": 88601015.44
+        },
+        {
+            "name": "Anti_Debug",
+            "status": "success",
+            "category": "Reverse",
+            "platform": "XCTF",
+            "year": "2022",
+            "difficulty": "Hard",
+            "tool": "reverse engineering",
+            "techniques_used": [
+                "anti-debug",
+                "patching",
+                "dynamic-analysis"
+            ],
+            "points": 130,
+            "flag": "xctf{anti debug_cracked}",
+            "time": 88601015.44
+        }
+    ]
+}

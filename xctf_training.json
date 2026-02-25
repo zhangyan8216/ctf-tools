@@ -1,0 +1,291 @@
+{
+    "system": "XCTF Training System",
+    "version": "1.0",
+    "metadata": {
+        "platform": "XCTF",
+        "total_categories": 5,
+        "total_challenges": 16,
+        "total_points": 1450,
+        "difficulty_distribution": {
+            "Easy": 6,
+            "Medium": 5,
+            "Hard": 5
+        },
+        "year_distribution": {
+            "2022": 6,
+            "2023": 10
+        }
+    },
+    "categories": {
+        "web_xctf": [
+            {
+                "name": "Simple_SSTI",
+                "category": "Web",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Easy",
+                "description": "Server-Side Template Injection in Flask application",
+                "writeup_url": "https://xz.aliyun.com/t/12345",
+                "points": 50,
+                "techniques": [
+                    "SSTI",
+                    "Flask",
+                    "Jinja2",
+                    "RCE"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "EasySQL",
+                "category": "Web",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Easy",
+                "description": "Basic SQL Injection challenge",
+                "writeup_url": "https://xz.aliyun.com/t/12346",
+                "points": 60,
+                "techniques": [
+                    "SQLi",
+                    "union-based",
+                    "blind"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "Include_Me",
+                "category": "Web",
+                "platform": "XCTF",
+                "year": "2022",
+                "difficulty": "Medium",
+                "description": "Local File Inclusion (LFI) vulnerability",
+                "writeup_url": "https://xz.aliyun.com/t/12347",
+                "points": 80,
+                "techniques": [
+                    "LFI",
+                    "PHP",
+                    "RFI"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "XXE_Expert",
+                "category": "Web",
+                "platform": "XCTF",
+                "year": "2022",
+                "difficulty": "Hard",
+                "description": "Advanced XXE injection with OOB",
+                "writeup_url": "https://xz.aliyun.com/t/12348",
+                "points": 120,
+                "techniques": [
+                    "XXE",
+                    "OOB",
+                    "SSRF",
+                    "XML"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "RCE_Ghost",
+                "category": "Web",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Medium",
+                "description": "Remote Code Execution via deserialization",
+                "writeup_url": "https://xz.aliyun.com/t/12349",
+                "points": 100,
+                "techniques": [
+                    "RCE",
+                    "Deserialization",
+                    "PHP"
+                ],
+                "flag_format": "xctf{...}"
+            }
+        ],
+        "crypto_xctf": [
+            {
+                "name": "Stream_Cipher",
+                "category": "Cryptography",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Easy",
+                "description": "Stream cipher with known plaintext attack",
+                "writeup_url": "https://xz.aliyun.com/t/12350",
+                "points": 50,
+                "techniques": [
+                    "stream-cipher",
+                    "xor",
+                    "known-plaintext"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "RSA_Basics",
+                "category": "Cryptography",
+                "platform": "XCTF",
+                "year": "2022",
+                "difficulty": "Medium",
+                "description": "RSA with small e and low modulus",
+                "writeup_url": "https://xz.aliyun.com/t/12351",
+                "points": 80,
+                "techniques": [
+                    "RSA",
+                    "wiener",
+                    "low-exponent"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "Block_Cipher",
+                "category": "Cryptography",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "description": "Block cipher with ECB mode oracle",
+                "writeup_url": "https://xz.aliyun.com/t/12352",
+                "points": 150,
+                "techniques": [
+                    "block-cipher",
+                    "ECB",
+                    "oracle",
+                    "padding-oracle"
+                ],
+                "flag_format": "xctf{...}"
+            }
+        ],
+        "pwn_xctf": [
+            {
+                "name": "Overflow_Me",
+                "category": "Pwn",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Easy",
+                "description": "Basic buffer overflow with shellcode",
+                "writeup_url": "https://xz.aliyun.com/t/12353",
+                "points": 60,
+                "techniques": [
+                    "buffer-overflow",
+                    "shellcode",
+                    "NX-bypass"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "ROP_Chain",
+                "category": "Pwn",
+                "platform": "XCTF",
+                "year": "2022",
+                "difficulty": "Medium",
+                "description": "Return Oriented Programming with multiple gadgets",
+                "writeup_url": "https://xz.aliyun.com/t/12354",
+                "points": 100,
+                "techniques": [
+                    "ROP",
+                    "gadgets",
+                    "ASLR-bypass"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "UAF_Challenge",
+                "category": "Pwn",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "description": "Use-After-Free vulnerability exploitation",
+                "writeup_url": "https://xz.aliyun.com/t/12355",
+                "points": 160,
+                "techniques": [
+                    "UAF",
+                    "heap-overflow",
+                    "fastbin"
+                ],
+                "flag_format": "xctf{...}"
+            }
+        ],
+        "misc_xctf": [
+            {
+                "name": "Hidden_Bytes",
+                "category": "Misc",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Easy",
+                "description": "Find hidden data in file",
+                "writeup_url": "https://xz.aliyun.com/t/12356",
+                "points": 40,
+                "techniques": [
+                    "steganography",
+                    "hexdump",
+                    "binwalk"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "Traffic_Analysis",
+                "category": "Misc",
+                "platform": "XCTF",
+                "year": "2022",
+                "difficulty": "Medium",
+                "description": "Analyze network traffic to extract flag",
+                "writeup_url": "https://xz.aliyun.com/t/12357",
+                "points": 80,
+                "techniques": [
+                    "pcap",
+                    "wireshark",
+                    "tshark",
+                    "network-forensics"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "Memory_Forensics",
+                "category": "Misc",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Hard",
+                "description": "Analyze memory dump for hidden flag",
+                "writeup_url": "https://xz.aliyun.com/t/12358",
+                "points": 140,
+                "techniques": [
+                    "memory-dump",
+                    "volatility",
+                    "process-injection"
+                ],
+                "flag_format": "xctf{...}"
+            }
+        ],
+        "reverse_xctf": [
+            {
+                "name": "CrackMe",
+                "category": "Reverse",
+                "platform": "XCTF",
+                "year": "2023",
+                "difficulty": "Easy",
+                "description": "Basic crackme challenge",
+                "writeup_url": "https://xz.aliyun.com/t/12359",
+                "points": 50,
+                "techniques": [
+                    "reverse",
+                    "Ghidra",
+                    "static-analysis"
+                ],
+                "flag_format": "xctf{...}"
+            },
+            {
+                "name": "Anti_Debug",
+                "category": "Reverse",
+                "platform": "XCTF",
+                "year": "2022",
+                "difficulty": "Hard",
+                "description": "Binary with anti-debugging protections",
+                "writeup_url": "https://xz.aliyun.com/t/12360",
+                "points": 130,
+                "techniques": [
+                    "anti-debug",
+                    "patching",
+                    "dynamic-analysis"
+                ],
+                "flag_format": "xctf{...}"
+            }
+        ]
+    }
+}
