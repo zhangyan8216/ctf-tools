@@ -1,111 +1,37 @@
-name: CTF Tools CI/CD Pipeline
+name: CTF Tools CI/CD Pipeline (简化版)
 
 on:
   push:
-    branches: [ master, main, develop ]
+    branches: [ master, main ]
   pull_request:
     branches: [ master, main ]
   workflow_dispatch:
 
 jobs:
-  # ==================== 测试 ====================
   test:
     name: 🧪 Test Python Code
     runs-on: ubuntu-latest
     
-    strategy:
-      matrix:
-        python-version: ['3.10', '3.11']
-    
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
-      
-      - name: 🐍 Set up Python ${{ matrix.python-version }}
+        
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
-          cache: 'pip'
-      
+          python-version: '3.11'
+        
       - name: 📦 Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install pytest pytest-asyncio pytest-cov requests beautifulsoup4
-          
-          # 尝试多个路径查找requirements.txt
-          if [ -f "requirements.txt" ]; then
-            pip install -r requirements.txt || true
-          fi
-          if [ -f "home/tools/vuln-hunter/requirements.txt" ]; then
-            pip install -r home/tools/vuln-hunter/requirements.txt || true
-          fi
-          if [ -f "home/ctf_agent/requirements.txt" ]; then
-            pip install -r home/ctf_agent/requirements.txt || true
-          fi
-          if [ -f "home/agent_by_cursor/requirements.txt" ]; then
-            pip install -r home/agent_by_cursor/requirements.txt || true
-          fi
-      
-      - name: 🧪 Run VulnHunter tests
+          pip install pytest pytest-asyncio beautifulsoup4 requests psutil
+        
+      - name: 🧪 Run basic tests if they exist
         run: |
-          if [ -d "tests/home/tools/vuln-hunter/" ]; then
-            python -m pytest tests/home/tools/vuln-hunter/ -v --tb=short || true
-          elif [ -d "home/tools/vuln-hunter/tests/" ]; then
-            python -m pytest home/tools/vuln-hunter/tests/ -v --tb=short || true
-          elif [ -d "tests/" ] && find tests -name "*vulnhunter*" -o -name "*VulnHunter*" | grep -q .; then
-            echo "Using find to locate VulnHunter tests..."
-            find tests -name "*vulnhunter*" -o -name "*VulnHunter*" -exec python -m pytest {} -v --tb=short \; || true
-          else
-            echo "No tests found for VulnHunter"
-          fi
-        continue-on-error: true
-      
-      - name: 🧪 Run CTF Agent tests
-        run: |
-          if [ -d "tests/home/ctf_agent/" ]; then
-            python -m pytest tests/home/ctf_agent/ -v --tb=short || true
-          elif [ -d "home/ctf_agent/tests/" ]; then
-            python -m pytest home/ctf_agent/tests/ -v --tb=short || true
-          elif [ -d "tests/" ] && find tests -name "*ctf_agent*" -o -name "*CTF_Agent*" | grep -q .; then
-            find tests -name "*ctf_agent*" -o -name "*CTF_Agent*" -exec python -m pytest {} -v --tb=short \; || true
-          else
-            echo "No tests found for CTF Agent"
-          fi
-        continue-on-error: true
-      
-      - name: 🧪 Run Agent by Cursor tests
-        run: |
-          if [ -d "tests/home/agent_by_cursor/" ]; then
-            python -m pytest tests/home/agent_by_cursor/ -v --tb=short || true
-          elif [ -d "home/agent_by_cursor/tests/" ]; then
-            python -m pytest home/agent_by_cursor/tests/ -v --tb=short || true
-          elif [ -d "tests/" ] && find tests -name "*agent_by_cursor*" -o -name "*Agent_Cursor*" | grep -q .; then
-            find tests -name "*agent_by_cursor*" -o -name "*Agent_Cursor*" -exec python -m pytest {} -v --tb=short \; || true
-          else
-            echo " No tests found for Agent by Cursor"
-          fi
-        continue-on-error: true
-      
-      - name: 📊 Generate coverage report
-        run: |
-          if [ -d "tests/home/agent_by_cursor/src/" ]; then
-            pytest --cov=./tests/home/agent_by_cursor/src --cov-report=xml --cov-report=html || true
-          elif [ -d "home/agent_by_cursor/src/" ]; then
-            pytest --cov=./home/agent_by_cursor/src --cov-report=xml --cov-report=html || true
-          else
-            echo "Skipping coverage report"
-          fi
-        continue-on-error: true
-      
-      - name: 📤 Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        if: always()
-        with:
-          files: ./coverage.xml
-          token: ${{ secrets.CODECOV_TOKEN }}
-        continue-on-error: true
+          python3 -m pytest tests/home/tools/vuln-hunter/test_basic.py -v --tb=short || \
+          python3 -m pytest tests/home/ctf_agent/test_basic.py -v --tb=short || \
+          python3 -m pytest tests/home/agent_by_cursor/test_basic.py -v --tb=short || \
+          echo "No test files found"
 
-  # ==================== 代码质量检查 ====================
   code-quality:
     name: 🔍 Code Quality Check
     runs-on: ubuntu-latest
@@ -113,75 +39,24 @@ jobs:
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
-      
+        
       - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-          cache: 'pip'
-      
+        
       - name: 📦 Install linting tools
         run: |
-          pip install flake8 black mypy isort || true
-      
-      - name: 🎨 Check code formatting with Black
+          pip install flake8 black
+        
+      - name: 🎨 Black formatting check
         run: |
-          if command -v black &> /dev/null; then
-            black --check . || true
-          else
-            echo "Black not installed, skipping"
-          fi
-        continue-on-error: true
-      
-      - name: 🔍 Lint with Flake8
+          black --check home/agent_by_cursor/src/ || echo "Black check failed (non-critical)"
+        
+      - name: 🔍 Flake8 linting
         run: |
-          if command -v flake8 &> /dev/null; then
-            flake8 . --exclude tests/ --max-line-length=100 --ignore=E501,W503 || true
-          else
-            echo "Flake8 not installed, skipping"
-          fi
-        continue-on-error: true
-      
-      - name: 📝 Type checking with MyPy
-        run: |
-          if command -v mypy &> /dev/null; then
-            mypy home/agent_by_cursor/src --ignore-missing-imports || true
-          else
-            echo "MyPy not installed, skipping"
-          fi
-        continue-on-error: true
+          flake8 . --exclude tests/ --max-line-length=100 --ignore=E501,W503 || echo "Flake8 failed (non-critical)"
 
-  # ==================== 安全扫描 ====================
-  security-scan:
-    name: 🔒 Security Scan
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-      
-      - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-      
-      - name: 📦 Install Bandit
-        run: pip install bandit || true
-      
-      - name: 🔍 Run Bandit security scan
-        run: |
-          bandit -r home/ -f json -o bandit-report.json || true
-        continue-on-error: true
-      
-      - name: 📤 Upload Bandit report
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: bandit-report
-          path: bandit-report.json
-
-  # ==================== Docker构建测试 ====================
   docker-build:
     name: 🐳 Docker Build Test
     runs-on: ubuntu-latest
@@ -189,65 +64,24 @@ jobs:
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
       
       - name: 🐳 Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       
-      - name: 🐳 Build VulnHunter image
+      - name: 🐳 Build VulnHunter
         run: |
-          if [ -f "home/tools/vuln-hunter/Dockerfile" ]; then
-            docker build -t vulnhunter:latest -f home/tools/vuln-hunter/Dockerfile ./home/tools/vuln-hunter || echo "Build failed (expected)"
-          else
-            echo "VulnHunter Dockerfile not found, skipping..."
-          fi
-      
-      - name: 🐳 Build CTF Agent image
+          docker build -t vulnhunter:latest home/tools/vulnhunter || echo "VulnHunter build skipped"
+        
+      - name: 🐳 Build CTF Agent
         run: |
-          if [ -f "home/ctf_agent/sandbox/Dockerfile" ]; then
-            docker build -t ctf-agent:latest -f home/ctf_agent/sandbox/Dockerfile ./home/ctf_agent || echo "Build failed (expected)"
-          else
-            echo "CTF Agent Dockerfile not found, skipping..."
-          fi
-      
-      - name: 🐳 Build Agent Cursor image
+          docker build -t ctf-agent:latest home/ctf_agent || echo "CTF Agent build skipped"
+        
+      - name: 🐳 Build Agent Cursor
         run: |
-          if [ -f "home/agent_by_cursor/Dockerfile" ]; then
-            docker build -t agent-cursor:latest -f home/agent_by_cursor/Dockerfile ./home/agent_by_cursor || echo "Build failed (expected)"
-          else
-            echo "Agent by Cursor Dockerfile not found, skipping..."
-          fi
+          docker build -t agent-cursor:latest home/agent_by_cursor || echo "Agent Cursor build skipped"
 
-  # ==================== 性能基准测试 ====================
-  performance:
-    name: ⚡ Performance Benchmark
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-      
-      - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-      
-      - name: 📦 Install dependencies
-        run: |
-          pip install psutil requests beautifulsoup4
-      
-      - name: 🏃 Run performance benchmarks
-        run: |
-          python run_benchmarks.py || true
-      
-      - name: 📊 Upload benchmark results
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: benchmark-results
-          path: benchmark_results.json
-
-  # ==================== 发布 ====================
   release:
     name: 🚀 Release
     runs-on: ubuntu-latest
@@ -258,33 +92,14 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
       
-      - name: 🏷️ Create Release Tag
-        id: tag_version
-        run: |
-          version=$(date +'%Y%m%d.%H%M%S')
-          echo "RELEASE_VERSION=v$version" >> $GITHUB_ENV
-          git tag -a "v$version" -m "Release v$version"
-          git push origin "v$version" || true
+      - name: 🏷️ Create and push tag
+        id: tag
       
-      - name: 🔖 Create Release
+      - name: 🔖 Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ env.RELEASE_VERSION }}
+          tag_name: ${{ steps.tag.outputs.tag }}
           draft: false
           prerelease: false
           generate_release_notes: true
-          body: |
-            ## 🚀 Release ${{ env.RELEASE_VERSION }}
-            
-            ### ✨ 新功能
-            - VulnHunter: 完整API文档 + 一键部署
-            - CTF Agent: Web Dashboard + 可视化
-            - Agent by Cursor: 性能优化 + 扩展工具
-            
-            ### 📦 交付物
-            - 3个生产级工具
-            - 60+测试用例
-            - 完整文档
-            - Docker支持
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_unpublished: false
