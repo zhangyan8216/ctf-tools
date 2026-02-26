@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super CTF Agent Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.10.0/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2a 0%, #2a1a2a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background: rgba(255, 255,255,0.9);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .card-body {
+            color: #333;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 0;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #888;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #e0e6e;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+          background: linear-gradient(90deg, #667eea, #764ba2);
+          transition: width 0.5s ease;
+        }
+        
+        .chart-container {
+            height: 200px;
+          background: rgba(255,255,255,0.95);
+          border-radius: 8px;
+          padding: 15px;
+        }
+        
+        .log-container {
+            background: rgba(0,0,0,0.8);
+          border-radius: 8px;
+          padding: 15px;
+          font-family: 'Consolas, monospace';
+          font-size: 13px;
+          color: #00ff00;
+          max-height: 300px;
+          overflow-y: auto;
+        }
+        
+        .log-entry {
+            margin-bottom: 8px;
+          border-bottom: 1px solid rgba(0,255,0,0.3);
+          padding: 5px;
+        }
+        
+        .log-time {
+            color: #00ff00;
+            opacity: 0.6;
+            font-size: 12px;
+        }
+        
+        .log-message {
+            color: #00ff00;
+            font-size: 12px;
+        }
+        
+        .alert {
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .alert-success {
+            background: rgba(16, 185, 129, 0.9);
+            border: 1px solid rgba(0, 0,0, 0.1);
+        }
+        
+        .alert-warning {
+            background: rgba(245, 158, 11, 0.9);
+            border: 1px solid rgba(0, 0,0,0.1);
+        }
+        
+        .alert-danger {
+            background: rgba(239, 68, 68, 0.9);
+            border: 1px solid rgba(0, 0,0,0.1);
+        }
+        
+        .tab-btn {
+            padding: 8px 16px;
+            border: none;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active {
+            background: rgba(102, 126, 234, 1);
+            border-color: transparent;
+        }
+        
+        .log-container::-webkit-scrollbar {
+            width: 8px;
+            background: rgba(255,255,255,0.05);
+            display: none;
+        }
+        
+        .log-container:hover::-webkit-scrollbar {
+            width: 8px;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+        .status-success {
+            background: rgba(16, 185, 129, 0.9);
+            color: #fff;
+        }
+        
+        .status-running {
+            background: rgba(67, 234, 234, 0.9);
+            color: #fff;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity:1; }
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        # Loading animation
+        .loading {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+        }
+        
+        .loading::after {
+            content: "..."
+            animation: dots 1.5s steps(4,8);
+            color: #888;
+        }
+        
+        @keyframes dots {
+            0%, 40%, 80%, 100% {
+              content: "•";
+            }
+            40%, 100% {
+              content: "";
+            }
+        }
+        
+        # Tool usage bars
+        .tool-usage {
+            margin-top: 10px;
+        }
+        
+        .tool-bar-container {
+            background: rgba(0,0,0,0.2);
+            border-radius: 4px;
+            height: 20px;
+            overflow: hidden;
+          background: #e0e6e;
+        }
+        
+        .tool-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+          transition: width 0.3s ease;
+        }
+        
+        .badge-count {
+            display: inline-block;
+            padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 11px;
+          color: #fff;
+          background: rgba(102, 126, 234, 0.8);
+        }
+        
+        .trend-indicator {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+        
+        .trend-up {
+            color: #10b981;
+        }
+        
+        .trend-down {
+            color: #ef4444;
+        }
+        
+        .nav-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+            color: #888;
+        }
+        
+        .nav-item:hover {
+            color: #fff;
+            border-left-color: rgba(255,255,255,0.3);
+        }
+        
+        .nav-item.active {
+            color: #fff;
+            border-left-color: #667eea;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <div>
+                <h1 style="font-size: 32px; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    🤖 Super CTF Agent Dashboard
+                </h1>
+                <p style="margin: 0; color: rgba(255,255,255,0.8);">
+                    超强解题能力 • 实时监控 • 性能优化
+                </p>
+            </div>
+            <div>
+                <div id="current-time" style="color: rgba(255,255,255,0.6); font-size: 14px;">
+                    正在时间: --
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Dashboard -->
+        <div class="dashboard-grid">
+            
+            <!-- 统计卡片 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">📊 实时统计</span>
+                </div>
+                <div class="card-body">
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                        <div>
+                            <div class="stat-value" id="total-solved">0</div>
+                            <div class="stat-label">已解决</div>
+                        </div>
+                        <div>
+                            <div class="stat-value" id="total-failed">0</div>
+                            <div class="stat-label">失败</div>
+                        </div>
+                        <div>
+                            <div class="stat-value" id="success-rate">0%</div>
+                            <div class="stat-label">成功率</div>
+                        </div>
+                        <div>
+                            <div class="stat-value" id="avg-time">0s</div>
+                            <div class="stat-label">平均时间</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%; transition: width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- 整题列表 -->
+            <div class="card">
+                <div class="card-header" style="justify-content: space-between; align-items: center;">
+                    <span class="card-title">🎯 活跃任务</span>
+                    <button class="tab-btn" onclick="loadMoreChallenges()">加载更多</button>
+                    <button class="tab-btn" onclick="toggleAutoSolve()">开启自动解题</button>
+                </div>
+                <div class="card-body">
+                    <div id="active-challenges" class="log-container">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 工具使用统计 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">🛠️ 工具使用</span>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr><th>工具</th><th>调用次数</th><th>成功率</th></tr>
+                        </thead>
+                        <tbody id="tool-stats">
+                            <tr>
+                                <td>Base64 Decode</td>
+                                <td id="base64-count">0</td>
+                                <td><span class="badge badge-success">100%</span></td>
+                            </tr>
+                            <tr>
+                                <td>ROT13</td>
+                                <td id="rot13-count">0</td>
+                                <td><span class="badge badge-success">100%</span></td>
+                            </tr>
+                            <tr>
+                                <td>XOR Cracking</td>
+                                <td id="xor-count">0</td>
+                                <td><span class="badge badge-success">95%</span></td>
+                            </tr>
+                            <tr>
+                                <td>SQL Injection</td>
+                                <td id="sqli-count">0</td>
+                                <td><span class="badge badge-warning">85%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Memory Staging</td>
+                                <td id="memory-staging-count">0</td>
+                                <span class="badge badge-primary">90%</span></td>
+                            </tr>
+                        </tbody>
+                    </tbody>
+                    </table>
+                    <div class="tool-usage">
+                        <div>Base64 Decode:</div>
+                        <div class="bar-container">
+                            <div class="tool-bar" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 性能图表 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">⚡ 性能监控</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="performance-chart"></canvas>
+                </div>
+            </div>
+            
+            <!-- 知识库 -->
+            <div class="card">
+                <div class="card-header" style="justify-content: space-between; align-items: center;">
+                    <span class="card-title">📚 知识库管理</span>
+                    <button class="tab-btn" onclick="clearKnowledge()">清空</button>
+                </div>
+                <div class="card-body">
+                    <input type="text" 
+                           id="knowledge-search" 
+                           placeholder="搜索知识和..." 
+                           style="width: 100%; 
+                           padding: 10px; 
+                           border-radius: 6px; 
+                           background: rgba(255,255,255,0.1); 
+                           color: #fff; font-size: 14px; border:1px solid rgba(255,255,255,0.3);">
+                    </div>
+                    <div id="knowledge-results" class="log-container" style="margin-top: 10px;">
+                        <p style="color: rgba(255,255,255,0.6); text-align: center;">搜索历史...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 日志输出 -->
+            <div class="card">
+                <div class="card-header" style="justify-content: space-between; align-items: center;">
+                    <span class="card-title">📝 解题过程日志</span>
+                    <button class="tab-btn" onclick="clearLogs()">清空</button>
+                </div>
+                <div class="card-body">
+                    <div id="log-output" class="log-container">
+                        <p style="color: rgba(255,255,255,0.6); text-align: center;">等待日志...</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    
+    <script>
+        // ==================== 初始化 ====================
+        let currentStats = {
+            total_solved: 0,
+            total_failed: 0,
+            success_rate: 0,
+            avg_time: 0,
+            performance: []
+        };
+        
+        let toolUsage = {
+            'base64_decode': {count: 0, success: 0},
+            'rot13': {count: 0, success: 0},
+            'xor': {count: 0, 'success: 0},
+            'sql_injection': {count: 0, success: 0},
+            'exploitation': {count: 0, success: 0},
+            'forensics': {count: 0, 0}
+        };
+        
+        // ==================== 工具使用监控 ====================
+        function updateToolStats() {
+            // 更新工具统计数据
+            const maxCount = 100;
+            // 这里应该是从实际API获取的
+            Object.keys(toolUsage).forEach(tool => {
+                // 模拟更新（实际应该从API获取）
+                toolUsage[tool].count = Math.floor(Math.random() * 50) + 10;
+                toolUsage[tool].success = 0.95 + Math.random() * 0.05;
+            });
+            
+            updateToolStatsUI();
+        }
+        
+        function updateToolStatsUI() {
+            const tableBody = document.querySelector('#tool-stats tbody');
+            if (!tableBody) return;
+            
+            let html = '';
+            Object.keys(toolUsage).sort().forEach(tool => {
+                const data = toolUsage[tool];
+                const successRate = data.success * 100;
+                const color = successRate >= 90 ? 'badge-success' : 'badge-warning';
+                
+                html += `
+                    <tr>
+                        <td>${tool}</td>
+                        <td style="font-family: 'Consolas, monospace; font-size: 12px;">${data.count}</td>
+                        <td><span class="${color}">${successRate.toFixed(1)}%</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <div style="margin-top: 10px;">${tool} Usage:</div>
+                            <div class="bar-container">
+                                <div class="progress-fill" style="width: ${successRate}%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+            
+            tableBody.innerHTML = html;
+            document.getElementById('base64-count').textContent = toolUsage['base64_decode'].count;
+            document.getElementById('rot13-count').textContent = toolUsage['rot13'].count;
+            document.getElementById('xor-count').textContent = toolUsage['xor'].count;
+            document.getElementById('sqli-count').textContent = toolUsage['sql_injection'].count;
+            document.getElementById('memory-staging-count').textContent = toolUsage['forensics'].count;
+            document.getElementById('exploitation-count').textContent = toolUsage['exploitation'].count;
+            
+            // 更新进度条
+            document.getElementById('base64-bar').style.width = `${toolUsage['base64_decode'].success * 100}%`;
+            document.getElementById('rot13-bar').style.width = `${toolUsage['rot13'].success * 100}%`;
+            document.getElementById('xor-bar').style.width = `${toolUsage['xor'].success * 100}%`;
+            document.getElementById('sqli-bar').style.width = `${toolUsage['sql_injection'].success * 100}%`;
+            document.getElementById('exploitation-bar').style.width = `${toolUsage['exploitation'].success * 100}%`;
+            document.getElementById('memory-staging-bar').style.width = `${toolUsage['forensics'].success * 100}%`;
+            
+            // 更新成功率
+            const total = currentStats.total_solved + currentStats.total_failed;
+            const newRate = (currentStats.total_solved / total * 100).toFixed(1);
+            document.getElementById('success-rate').textContent = newRate + "%";
+            document.getElementById('total-solved').textContent = currentStats.total_solved;
+            document.getElementById('total-failed').textContent = currentStats.total_failed;
+        }
+        
+        // ==================== 性能图表 ====================
+        const performanceCtx = document.getElementById('performance-chart').getContext('2d');
+        if (performanceCtx) {
+            new Chart(performanceCtx).data = {
+                labels: ['平均响应时间', '内存占用'],
+                datasets: [{
+                    label: '当前',
+                    data: [currentStats.avg_time, 300],
+                    borderColor: '#764ba2',
+                    backgroundColor: '#667eea',
+                    borderWidth: 2,
+                    tension: 0.3
+                }, {
+                    label: '优化后',
+                    data: [currentStats.avg_time * 0.3, 90],
+                    borderColor: '#10b981',
+                    backgroundColor: '#059669',
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            };
+        }
+        
+        // ==================== 活跃任务 ====================
+        let activeChallenges = [];
+        
+        async function loadMoreChallenges() {
+            const demoChallenges = [
+                {name: 'Base64 Challenge', category: 'crypto', difficulty: 1, flag: 'CTFlearn{this_is_flag}'},
+                {name: 'ROT13 Challenge', category: 'crypto', difficulty: 1, flag: 'picoCTF{rot13_solved}'},
+                {name: 'XSS Challenge', category: 'web', difficulty: 3, flag: 'picoCTF{xss_found}'},
+                {name: 'Buffer Overflow', category: 'pwn', difficulty: 7, flag: 'picoCTF{got_shell}'},
+            ];
+            
+            const container = document.getElementById('active-challenges');
+            container.innerHTML = '';
+            
+            demoChallenges.forEach((challenge, index) => {
+                const status = index < 3 ? 'solved' : 'pending';
+                const badge = status === 'solved' ? 'badge-success' : 'status running';
+                
+                container.innerHTML += `
+                    <div class="log-entry">
+                        <span class="log-time">${currentTime()}</span>
+                        <span class="log-message">
+                            <span class="badge ${badge}">${status}</span>
+                            ${challenge.name} (难度: ${'⭐' * challenge.difficulty})
+                        </span>
+                        <span class="log-message">Flag: ${challenge.flag}</span>
+                    </div>
+                `;
+            });
+        }
+        
+        async function toggleAutoSolve() {
+            const btn = event.target;
+            btn.textContent = btn.textContent === '开启自动解题' ? '关闭自动解题' : '开启自动解题';
+            btn.style.opacity = btn.textContent === '关闭自动解题' ? '0.5' : '1';
+        }
+        
+        // ==================== 知识库 ====================
+        async function searchKnowledge() {
+            search = document.getElementById('knowledge-search').value;
+            const container = document.getElementById('knowledge-results');
+            
+            if (!search.trim()) {
+                container.innerHTML = '<p style="color: rgba(255,255,255,0.6); text-align: center;">搜索知识库...</p>';
+                return;
+            }
+            
+            // 模拟搜索结果
+            const results = [
+                {
+                    "problem": "如何解码Base64",
+                    "solution": "使用base64_decode()",
+                    "success": true,
+                    "time": "2天前"
+                },
+                {
+                    "problem": "SQL注入如何防止",
+                    "solution": "使用参数化查询",
+                    "success": true,
+                    "time": "3天前"
+                },
+                {
+                    "problem": "Heap Overflow是什么",
+                    "chain": ["malloc", "double-free", "fastbin", "tcache", "UAF", "unsafe memcpy"],
+                    "solution": "使用fastbin | 利用fastbin漏洞",
+                    "success": true,
+                    "time": "5天前"
+                }
+            ];
+            
+            let html = '';
+            results.forEach((item, i) => {
+                html += `
+                    <div class="log-entry">
+                        <span class="log-time">${item.time}</span>
+                        <span class="log-message">
+                            <strong>${item.problem}</strong>
+                        </span>
+                        <div style="margin-top: 8px; color: #aaa;">
+                            <strong>解决方案:</strong> ${item.solution}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html || '<p style="color: rgba(255,255,255,0.6); text-align: center;">没有找到相关知识</p>';
+        }
+        
+        async function clearKnowledge() {
+            document.getElementById('knowledge-results').innerHTML = '<p style="color: rgba(255,255,255,0.6); text-align: center;">知识库已清空</p>';
+        }
+        
+        // ==================== 日志 ====================
+        function addLog(message, type = 'info') {
+            const container = document.getElementById('log-output');
+            const time = new Date().toLocaleTimeString();
+            
+            const colorMap = {
+                'info': '#00ff00',   # 绿色
+                'success': '#10b981', # 浅绿
+                'error': '#ef4444',   # 红色
+                'warning': '#f59e0b'  # 橙色
+            };
+            
+            const color = colorMap.get(type, '#ggggg');  // 默认灰色
+            
+            container.innerHTML += `
+                <div class="log-entry">
+                    <span class="log-time">${time}</span>
+                    <span class="log-message" style="color: ${color};">${message}</span>
+                </div>
+            `;
+            
+            container.scrollTop = container.scrollHeight;
+        }
+        
+        function clearLogs() {
+            document.getElementById('log-output').innerHTML = '<p style="color: rgba(255,255,255,0.6); text-align: center;">日志已清空</p>';
+        }
+        
+        // ==================== 实时更新 ====================
+        
+        async function updateRealtimeStats() {
+            // 更新时间
+            const now = new Date().toLocaleTimeString();
+            document.getElementById('current-time').textContent = `正在时间: ${now}`;
+            
+            // 更新统计数据（模拟）
+            const total = Math.random() * 100;  // 模拟数据，实际应该从API获取
+            const solved = Math.floor(total * 0.967);
+            const failed = Math.floor(total * 0.033);
+            const rate = (total_solved / total * 100).toFixed(1);
+            
+            document.getElementById('total-solved').textContent = solved;
+            document.getElementById('total-failed').textContent = failed;
+            document.getElementById('success-rate').textContent = rate + '%';
+            document.getElementById('avg-time').textContent = (Math.random() * 3).toFixed(2) + 's';
+            
+            // 更新成功率条
+            document.getElementById('success-rate-bar').style.width = rate + '%';
+        }
+        
+        setInterval(updateRealtimeStats, 5000);  // 每5秒更新一次
+        
+        // ==================== 性能图表 ====================
+        function updatePerformanceChart() {
+            // 模拟性能数据更新
+            const newAvgTime = Math.random() * 3;
+            const newMem = Math.random() * 500 + 200;
+            
+            performanceCtx.data.datasets[0].data = [performanceCtx.data.datasets[0].data[0], newAvgTime];
+            performanceCtx.data.datasets[1].data = [performanceCtx.data.datasets[1].data[1], newMem];
+            performanceCtx.update();
+        }
+        
+        // 定期更新性能图表
+        setInterval(updatePerformanceChart, 30000);  // 每30秒
+        
+        // ==================== 主循环 ====================
+        setInterval(() => {
+            updateRealtimeStats();
+        }, 5000);
+        
+    </script>
+</body>
+</html>
