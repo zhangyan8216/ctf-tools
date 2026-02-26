@@ -15,7 +15,7 @@ jobs:
     
     strategy:
       matrix:
-        python-version: ['3.10', '3.11']  # 减少到2个版本进行测试
+        python-version: ['3.10', '3.11']
     
     steps:
       - name: 📥 Checkout code
@@ -30,7 +30,10 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest pytest-asyncio pytest-cov
+          pip install pytest pytest-asyncio pytest-cov requests beautifulsoup4
+          if [ -f "requirements.txt" ]; then
+            pip install -r requirements.txt || true
+          fi
           if [ -f "home/tools/vuln-hunter/requirements.txt" ]; then
             pip install -r home/tools/vuln-hunter/requirements.txt || true
           fi
@@ -43,7 +46,9 @@ jobs:
       
       - name: 🧪 Run VulnHunter tests
         run: |
-          if [ -d "home/tools/vuln-hunter/tests/" ]; then
+          if [ -d "tests/home/tools/vuln-hunter/" ]; then
+            python -m pytest tests/home/tools/vuln-hunter/ -v --tb=short || true
+          elif [ -d "home/tools/vuln-hunter/tests/" ]; then
             python -m pytest home/tools/vuln-hunter/tests/ -v --tb=short || true
           else
             echo "No tests found for VulnHunter"
@@ -52,17 +57,21 @@ jobs:
       
       - name: 🧪 Run CTF Agent tests
         run: |
-          if [ -d "home/ctf_agent/tests/" ]; then
+          if [ -d "tests/home/ctf_agent/" ]; then
+            python -m pytest tests/home/ctf_agent/ -v --tb=short || true
+          elif [ -d "home/ctf_agent/tests/" ]; then
             python -m pytest home/ctf_agent/tests/ -v --tb=short || true
           else
-            echo "No tests found for CTF Agent"
+            echo " No tests found for CTF Agent"
           fi
         continue-on-error: true
       
       - name: 🧪 Run Agent by Cursor tests
         run: |
-          if [ -d "home/agent_by_cursor/tests/" ]; then
-            python -m pytest home/agent_by_cursor/tests/test_basic.py -v --tb=short || true
+          if [ -d "tests/home/agent_by_cursor/" ]; then
+            python -m pytest tests/home/agent_by_cursor/ -v --tb=short || true
+          elif [ -d "home/agent_by_cursor/tests/" ]; then
+            python -m pytest home/agent_by_cursor/tests/ -v --tb=short || true
           else
             echo "No tests found for Agent by Cursor"
           fi
@@ -70,7 +79,9 @@ jobs:
       
       - name: 📊 Generate coverage report
         run: |
-          if [ -d "home/agent_by_cursor/src/" ]; then
+          if [ -d "tests/home/agent_by_cursor/src/" ]; then
+            pytest --cov=./tests/home/agent_by_cursor/src --cov-report=xml --cov-report=html || true
+          elif [ -d "home/agent_by_cursor/src/" ]; then
             pytest --cov=./home/agent_by_cursor/src --cov-report=xml --cov-report=html || true
           else
             echo "Skipping coverage report"
@@ -98,6 +109,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+          cache: 'pip'
       
       - name: 📦 Install linting tools
         run: |
@@ -106,7 +118,7 @@ jobs:
       - name: 🎨 Check code formatting with Black
         run: |
           if command -v black &> /dev/null; then
-            black --check ./home/agent_by_cursor/src/ --diff || true
+            black --check ./home/ --exclude tests/ --diff || true
           else
             echo "Black not installed, skipping"
           fi
@@ -115,7 +127,7 @@ jobs:
       - name: 🔍 Lint with Flake8
         run: |
           if command -v flake8 &> /dev/null; then
-            flake8 ./home/agent_by_cursor/src/ --max-line-length=100 --ignore=E501,W503 || true
+            flake8 ./home/ --exclude tests/ --max-line-length=100 --ignore=E501,W503 || true
           else
             echo "Flake8 not installed, skipping"
           fi
@@ -129,6 +141,36 @@ jobs:
             echo "MyPy not installed, skipping"
           fi
         continue-on-error: true
+
+  # ==================== 安全扫描 ====================
+  security-scan:
+    name: 🔒 Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+      
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Install Bandit
+        run: pip install bandit || true
+      
+      - name: 🔍 Run Bandit security scan
+        run: |
+          bandit -r ./home -f json -o bandit-report.json || true
+        continue-on-error: true
+      
+      - name: 📤 Upload Bandit report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: bandit-report
+          path: bandit-report.json
 
   # ==================== Docker构建测试 ====================
   docker-build:
@@ -165,6 +207,36 @@ jobs:
           else
             echo "Agent by Cursor Dockerfile not found, skipping..."
           fi
+
+  # ==================== 性能基准测试 ====================
+  performance:
+    name: ⚡ Performance Benchmark
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+      
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Install dependencies
+        run: |
+          pip install psutil requests beautifulsoup4
+      
+      - name: 🏃 Run performance benchmarks
+        run: |
+          python run_benchmarks.py || true
+      
+      - name: 📊 Upload benchmark results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: benchmark-results
+          path: benchmark_results.json
 
   # ==================== 发布 ====================
   release:
